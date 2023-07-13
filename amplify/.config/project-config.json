@@ -1,0 +1,17 @@
+{
+  "providers": [
+    "awscloudformation"
+  ],
+  "projectName": "realState",
+  "version": "3.1",
+  "frontend": "javascript",
+  "javascript": {
+    "framework": "react",
+    "config": {
+      "SourceDir": "POC",
+      "DistributionDir": "build",
+      "BuildCommand": "",
+      "StartCommand": "npm run-script start"
+    }
+  }
+}

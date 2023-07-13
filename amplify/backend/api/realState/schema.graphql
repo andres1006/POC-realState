@@ -1,0 +1,13 @@
+type Property @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  nameStreet: String
+  bedsQuantity: Int
+  bathroomsQuantity: Int
+  dimension: String
+  priceXMonth: Float
+  longitud: String
+  latitude: String
+  image: String
+  address: String
+}
+ 
