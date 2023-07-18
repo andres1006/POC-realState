@@ -1,0 +1,26 @@
+{
+  "staging": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-realstate-staging-50449-authRole",
+      "UnauthRoleArn": "arn:aws:iam::022696952742:role/amplify-realstate-staging-50449-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::022696952742:role/amplify-realstate-staging-50449-authRole",
+      "Region": "us-east-2",
+      "DeploymentBucketName": "amplify-realstate-staging-50449-deployment",
+      "UnauthRoleName": "amplify-realstate-staging-50449-unauthRole",
+      "StackName": "amplify-realstate-staging-50449",
+      "StackId": "arn:aws:cloudformation:us-east-2:022696952742:stack/amplify-realstate-staging-50449/9f3eb2f0-2528-11ee-8ca9-02a381f54a21",
+      "AmplifyAppId": "d31alf1u10bysa"
+    },
+    "categories": {
+      "function": {
+        "propertiesLambda": {
+          "deploymentBucketName": "amplify-realstate-staging-50449-deployment",
+          "s3Key": "amplify-builds/propertiesLambda-483572594f4761585441-build.zip"
+        }
+      },
+      "api": {
+        "realStateRest": {}
+      }
+    }
+  }
+}

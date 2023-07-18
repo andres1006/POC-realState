@@ -1,0 +1,43 @@
+{
+  "api": {
+    "realStateRest": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "propertiesLambda"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    }
+  },
+  "function": {
+    "propertiesLambda": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_propertiesLambda_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "propertiesLambda"
+        }
+      ]
+    },
+    "AMPLIFY_function_propertiesLambda_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "propertiesLambda"
+        }
+      ]
+    }
+  }
+}

@@ -1,16 +1,15 @@
 import React from "react";
-/* 
+
 import { View } from "@aws-amplify/ui-react";
 
 import {
   SearchProperties,
   CardPropertyHorizontal,
-  PropertyCreateForm,
-} from "../../POC/ui-components"; */
+} from "../../POC/ui-components";
 
 function Search() {
-  return {
-    /* <View
+  return (
+    <View
       style={{
         width: "100%",
         height: "85vh",
@@ -27,7 +26,7 @@ function Search() {
           flexDirection: "column",
         }}
       >
-        <PropertyCreateForm />
+        {/* <PropertyCreateForm /> */}
         <SearchProperties />
       </View>
       <View
@@ -41,11 +40,11 @@ function Search() {
           marginTop: "10px",
         }}
       >
-        <PropertyCreateForm /> 
+        {/* <PropertyCreateForm /> */}
         <CardPropertyHorizontal />
       </View>
-    </View> */
-  };
+    </View>
+  );
 }
 
 export default Search;

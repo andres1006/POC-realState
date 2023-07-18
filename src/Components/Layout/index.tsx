@@ -1,9 +1,9 @@
 import React from "react";
 
-/* import { TopBarProp } from "../../POC/ui-components";
+import { TopBarProp } from "../../POC/ui-components";
 import { View } from "@aws-amplify/ui-react";
 import Search from "../Search";
-import Map from "../Map"; */
+import Map from "../Map";
 
 const Layout = () => {
   const profileOverrides = {
@@ -13,8 +13,7 @@ const Layout = () => {
     },
   };
 
-  return null;
-  /*  return (
+  return (
     <View>
       <TopBarProp overrides={{ ...profileOverrides }} />
       <View
@@ -33,8 +32,8 @@ const Layout = () => {
           <Search />
         </View>
       </View>
-    </View> 
-  );*/
+    </View>
+  );
 };
 
 export default Layout;

@@ -3,24 +3,24 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 
-/* import "@aws-amplify/ui-react/styles.css";
+import "@aws-amplify/ui-react/styles.css";
 
 import { Amplify } from "aws-amplify";
-import { ThemeProvider } from "@aws-amplify/ui-react"; */
+import { ThemeProvider } from "@aws-amplify/ui-react";
 
-/* import awsconfig from "./POC/aws-exports";
-import studioTheme from "./POC/ui-components/studioTheme"; */
+import awsconfig from "./POC/aws-exports";
+import studioTheme from "./POC/ui-components/studioTheme";
 
-/* Amplify.configure(awsconfig); */
+Amplify.configure(awsconfig);
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    {/*     <ThemeProvider theme={studioTheme}> */}
-    <App />
-    {/*  </ThemeProvider> */}
+    <ThemeProvider theme={studioTheme}>
+      <App />
+    </ThemeProvider>
   </React.StrictMode>
 );
 
