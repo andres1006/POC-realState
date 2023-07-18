@@ -10,10 +10,10 @@ import { getOverrideProps } from "@aws-amplify/ui-react/internal";
 import { Flex, Icon, Image, Text, View } from "@aws-amplify/ui-react";
 import NewIcons from "./NewIcons";
 export default function CardPropertyHorizontal(props) {
-  const { overrides, ...rest } = props;
+  const { property, overrides, ...rest } = props;
   return (
     <View
-      width="640px"
+      width="289px"
       height="180px"
       display="block"
       gap="unset"
@@ -25,7 +25,8 @@ export default function CardPropertyHorizontal(props) {
       {...rest}
     >
       <View
-        width="640px"
+        padding="0px 0px 0px 0px"
+        width="222px"
         height="180px"
         display="block"
         gap="unset"
@@ -35,45 +36,12 @@ export default function CardPropertyHorizontal(props) {
         top="0%"
         bottom="0%"
         left="0%"
-        right="0%"
-        border="1.5px SOLID rgba(240,239,251,1)"
-        borderRadius="8px"
-        padding="0px 0px 0px 0px"
-        backgroundColor="rgba(255,255,255,1)"
-        {...getOverrideProps(overrides, "Rectangle 392")}
-      ></View>
-      <View
-        padding="0px 0px 0px 0px"
-        width="40px"
-        height="40px"
-        display="block"
-        gap="unset"
-        alignItems="unset"
-        justifyContent="unset"
-        position="absolute"
-        top="13.33%"
-        bottom="64.44%"
-        left="90%"
-        right="3.75%"
-        {...getOverrideProps(overrides, "Favorited")}
+        right="23.18%"
+        {...getOverrideProps(overrides, "Mask Group")}
       >
-        <Icon
-          width="40px"
-          height="40px"
-          viewBox={{ minX: 0, minY: 0, width: 40, height: 40 }}
-          paths={[
-            {
-              d: "M38.5 20C38.5 30.2173 30.2173 38.5 20 38.5L20 41.5C31.8741 41.5 41.5 31.8741 41.5 20L38.5 20ZM20 38.5C9.78273 38.5 1.5 30.2173 1.5 20L-1.5 20C-1.5 31.8741 8.12588 41.5 20 41.5L20 38.5ZM1.5 20C1.5 9.78273 9.78273 1.5 20 1.5L20 -1.5C8.12588 -1.5 -1.5 8.12588 -1.5 20L1.5 20ZM20 1.5C30.2173 1.5 38.5 9.78273 38.5 20L41.5 20C41.5 8.12588 31.8741 -1.5 20 -1.5L20 1.5Z",
-              stroke: "rgba(224,222,247,1)",
-              fillRule: "nonzero",
-              strokeWidth: 1,
-            },
-            {
-              d: "M40 20C40 31.0457 31.0457 40 20 40C8.9543 40 0 31.0457 0 20C0 8.9543 8.9543 0 20 0C31.0457 0 40 8.9543 40 20Z",
-              fill: "rgba(255,255,255,1)",
-              fillRule: "nonzero",
-            },
-          ]}
+        <View
+          width="222px"
+          height="180px"
           display="block"
           gap="unset"
           alignItems="unset"
@@ -83,62 +51,123 @@ export default function CardPropertyHorizontal(props) {
           bottom="0%"
           left="0%"
           right="0%"
-          {...getOverrideProps(overrides, "Ellipse")}
-        ></Icon>
-        <NewIcons
-          width="20px"
-          height="20px"
+          borderRadius="8px 0px 0px 8px"
+          padding="0px 0px 0px 0px"
+          backgroundColor="rgba(19,15,38,1)"
+          {...getOverrideProps(overrides, "Rectangle 395")}
+        ></View>
+        <Image
+          width="100%"
+          height="100%"
           display="block"
           gap="unset"
           alignItems="unset"
           justifyContent="unset"
           position="absolute"
-          top="25%"
-          bottom="25%"
-          left="25%"
-          right="25%"
+          top="0%"
+          bottom="0%"
+          left="0%"
+          right="0%"
+          borderRadius="8px 0px 0px 8px"
           padding="0px 0px 0px 0px"
-          property1="Love"
-          {...getOverrideProps(overrides, "NewIcons37738649")}
-        ></NewIcons>
+          objectFit="cover"
+          src={property?.urlImage}
+          {...getOverrideProps(overrides, "pexels-binyamin-mellish-1396122 1")}
+        ></Image>
       </View>
       <View
-        padding="0px 0px 0px 0px"
-        width="284.5px"
-        height="132px"
+        width="287px"
+        height="180px"
         display="block"
         gap="unset"
         alignItems="unset"
         justifyContent="unset"
+        overflow="hidden"
         position="absolute"
-        top="13.33%"
-        bottom="13.33%"
-        left="47.42%"
-        right="8.13%"
-        {...getOverrideProps(overrides, "Group")}
+        top="0%"
+        bottom="0%"
+        left="76.82%"
+        right="-76.12%"
+        padding="0px 0px 0px 0px"
+        {...getOverrideProps(overrides, "Frame")}
       >
+        <Flex
+          gap="10px"
+          direction="row"
+          width="246px"
+          height="unset"
+          justifyContent="flex-start"
+          alignItems="flex-start"
+          position="absolute"
+          top="25px"
+          left="16px"
+          padding="0px 0px 0px 0px"
+          {...getOverrideProps(overrides, "Price")}
+        >
+          <Text
+            fontFamily="Plus Jakarta Sans"
+            fontSize="16px"
+            fontWeight="800"
+            color="rgba(112,101,240,1)"
+            lineHeight="24px"
+            textAlign="left"
+            display="block"
+            direction="column"
+            justifyContent="unset"
+            letterSpacing="-0.85px"
+            width="unset"
+            height="unset"
+            gap="unset"
+            alignItems="unset"
+            shrink="0"
+            position="relative"
+            padding="0px 0px 0px 0px"
+            whiteSpace="pre-wrap"
+            children={`${"$"}${property?.price}`}
+            {...getOverrideProps(overrides, "$45.89")}
+          ></Text>
+          <Text
+            fontFamily="Plus Jakarta Sans"
+            fontSize="14px"
+            fontWeight="500"
+            color="rgba(0,9,41,1)"
+            lineHeight="19.600000381469727px"
+            textAlign="left"
+            display="block"
+            direction="column"
+            justifyContent="unset"
+            width="51px"
+            height="20px"
+            gap="unset"
+            alignItems="unset"
+            shrink="0"
+            position="relative"
+            padding="0px 0px 0px 0px"
+            whiteSpace="pre-wrap"
+            children="/month"
+            {...getOverrideProps(overrides, "/month")}
+          ></Text>
+        </Flex>
         <Text
           fontFamily="Plus Jakarta Sans"
           fontSize="20px"
-          fontWeight="700"
+          fontWeight="800"
           color="rgba(0,9,41,1)"
           lineHeight="28px"
           textAlign="left"
           display="block"
           direction="column"
           justifyContent="unset"
-          width="272px"
+          width="271px"
           height="unset"
           gap="unset"
           alignItems="unset"
           position="absolute"
-          top="21.21%"
-          bottom="57.58%"
-          left="0.18%"
-          right="4.22%"
+          top="61.5px"
+          left="16px"
           padding="0px 0px 0px 0px"
           whiteSpace="pre-wrap"
-          children="St. Crystal"
+          children={property?.streetName}
           {...getOverrideProps(overrides, "St. Crystal")}
         ></Text>
         <Text
@@ -151,107 +180,51 @@ export default function CardPropertyHorizontal(props) {
           display="block"
           direction="column"
           justifyContent="unset"
-          width="284px"
-          height="unset"
+          width="229px"
+          height="20px"
           gap="unset"
           alignItems="unset"
           position="absolute"
-          top="48.48%"
-          bottom="36.36%"
-          left="0.18%"
-          right="0%"
+          top="102.5px"
+          left="16px"
           padding="0px 0px 0px 0px"
           whiteSpace="pre-wrap"
-          children="210 US Highway, Highland Lake, FL"
+          children={property?.address}
           {...getOverrideProps(overrides, "210 US Highway, Highland Lake, FL")}
         ></Text>
-        <View
-          padding="0px 0px 0px 0px"
-          width="264px"
-          height="24px"
+        <Icon
+          width="264.85px"
+          height="0px"
+          viewBox={{ minX: 0, minY: 0, width: 264.8505859375, height: 1 }}
+          paths={[
+            {
+              d: "M0 1.5L264.851 1.5L264.851 -1.5L0 -1.5L0 1.5Z",
+              stroke: "rgba(240,239,251,1)",
+              fillRule: "nonzero",
+              strokeWidth: 3,
+            },
+          ]}
           display="block"
           gap="unset"
           alignItems="unset"
           justifyContent="unset"
           position="absolute"
-          top="0%"
-          bottom="81.82%"
-          left="0.18%"
-          right="7.03%"
-          {...getOverrideProps(overrides, "Price")}
-        >
-          <Flex
-            gap="2px"
-            direction="row"
-            width="264px"
-            height="unset"
-            justifyContent="flex-start"
-            alignItems="center"
-            position="absolute"
-            top="0%"
-            bottom="0%"
-            left="0%"
-            right="0%"
-            padding="0px 0px 0px 0px"
-            {...getOverrideProps(overrides, "Frame 865")}
-          >
-            <Text
-              fontFamily="Plus Jakarta Sans"
-              fontSize="16px"
-              fontWeight="800"
-              color="rgba(112,101,240,1)"
-              lineHeight="24px"
-              textAlign="left"
-              display="block"
-              direction="column"
-              justifyContent="unset"
-              letterSpacing="-0.85px"
-              width="unset"
-              height="unset"
-              gap="unset"
-              alignItems="unset"
-              shrink="0"
-              position="relative"
-              padding="0px 0px 0px 0px"
-              whiteSpace="pre-wrap"
-              children="$2,400"
-              {...getOverrideProps(overrides, "$2,400")}
-            ></Text>
-            <Text
-              fontFamily="Plus Jakarta Sans"
-              fontSize="14px"
-              fontWeight="500"
-              color="rgba(0,9,41,1)"
-              lineHeight="19.600000381469727px"
-              textAlign="left"
-              display="block"
-              direction="column"
-              justifyContent="unset"
-              width="unset"
-              height="unset"
-              gap="unset"
-              alignItems="unset"
-              shrink="0"
-              position="relative"
-              padding="0px 0px 0px 0px"
-              whiteSpace="pre-wrap"
-              children="/month"
-              {...getOverrideProps(overrides, "/month")}
-            ></Text>
-          </Flex>
-        </View>
+          top="71.67%"
+          bottom="28.33%"
+          left="3.9%"
+          right="3.82%"
+          {...getOverrideProps(overrides, "Line")}
+        ></Icon>
         <Flex
           gap="16px"
           direction="row"
           width="unset"
           height="unset"
-          justifyContent="center"
+          justifyContent="flex-start"
           alignItems="flex-start"
           position="absolute"
-          top="84.85%"
-          bottom="0%"
-          left="0%"
-          right="40.25%"
+          top="135.5px"
+          left="16px"
           padding="0px 0px 0px 0px"
           {...getOverrideProps(overrides, "Facilities")}
         >
@@ -298,7 +271,7 @@ export default function CardPropertyHorizontal(props) {
               position="relative"
               padding="0px 0px 0px 0px"
               whiteSpace="pre-wrap"
-              children="4"
+              children={property?.bedsQuality}
               {...getOverrideProps(overrides, "4")}
             ></Text>
           </Flex>
@@ -398,79 +371,6 @@ export default function CardPropertyHorizontal(props) {
           </Flex>
         </Flex>
       </View>
-      <View
-        padding="0px 0px 0px 0px"
-        width="280px"
-        height="180px"
-        display="block"
-        gap="unset"
-        alignItems="unset"
-        justifyContent="unset"
-        position="absolute"
-        top="0%"
-        bottom="0%"
-        left="0%"
-        right="56.25%"
-        {...getOverrideProps(overrides, "Mask Group")}
-      >
-        <View
-          width="280px"
-          height="180px"
-          display="block"
-          gap="unset"
-          alignItems="unset"
-          justifyContent="unset"
-          position="absolute"
-          top="0%"
-          bottom="0%"
-          left="0%"
-          right="0%"
-          borderRadius="8px 0px 0px 8px"
-          padding="0px 0px 0px 0px"
-          backgroundColor="rgba(19,15,38,1)"
-          {...getOverrideProps(overrides, "Rectangle 395")}
-        ></View>
-        <Image
-          width="100%"
-          height="100%"
-          display="block"
-          gap="unset"
-          alignItems="unset"
-          justifyContent="unset"
-          position="absolute"
-          top="0%"
-          bottom="0%"
-          left="0%"
-          right="0%"
-          borderRadius="8px 0px 0px 8px"
-          padding="0px 0px 0px 0px"
-          objectFit="cover"
-          {...getOverrideProps(overrides, "pexels-binyamin-mellish-1396122 1")}
-        ></Image>
-      </View>
-      <Icon
-        width="312px"
-        height="0px"
-        viewBox={{ minX: 0, minY: 0, width: 312, height: 1 }}
-        paths={[
-          {
-            d: "M0 0L312 0L312 -3L0 -3L0 0Z",
-            stroke: "rgba(240,239,251,1)",
-            fillRule: "nonzero",
-            strokeWidth: 3,
-          },
-        ]}
-        display="block"
-        gap="unset"
-        alignItems="unset"
-        justifyContent="unset"
-        position="absolute"
-        top="70%"
-        bottom="30%"
-        left="47.5%"
-        right="3.75%"
-        {...getOverrideProps(overrides, "Line")}
-      ></Icon>
     </View>
   );
 }

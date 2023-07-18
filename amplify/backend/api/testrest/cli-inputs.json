@@ -5,7 +5,7 @@
       "name": "/properties",
       "lambdaFunction": "propertieslambda",
       "permissions": {
-        "setting": "private",
+        "setting": "open",
         "auth": [
           "read"
         ]

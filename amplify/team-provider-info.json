@@ -21,6 +21,13 @@
           "deploymentBucketName": "amplify-realstaterest-staging-23505-deployment",
           "s3Key": "amplify-builds/propertieslambda-483572594f4761585441-build.zip"
         }
+      },
+      "api": {
+        "realStateREST": {},
+        "testrest": {}
+      },
+      "storage": {
+        "realstaterestf18d5c9f": {}
       }
     }
   }
