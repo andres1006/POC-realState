@@ -7,23 +7,18 @@
 /* eslint-disable */
 import * as React from "react";
 import { Property } from "../models";
-import { SortDirection } from "@aws-amplify/datastore";
 import {
   getOverrideProps,
   useDataStoreBinding,
 } from "@aws-amplify/ui-react/internal";
-import CardPropertyHorizontal from "./CardPropertyHorizontal";
+import CardPropertyVertical from "./CardPropertyVertical";
 import { Collection } from "@aws-amplify/ui-react";
-export default function CardPropertyHorizontalCollection(props) {
+export default function CardPropertyVerticalCollection(props) {
   const { items: itemsProp, overrideItems, overrides, ...rest } = props;
-  const itemsPagination = {
-    sort: (s) => s.priceXMonth(SortDirection.ASCENDING),
-  };
   const [items, setItems] = React.useState(undefined);
   const itemsDataStore = useDataStoreBinding({
     type: "collection",
     model: Property,
-    pagination: itemsPagination,
   }).items;
   React.useEffect(() => {
     if (itemsProp !== undefined) {
@@ -35,23 +30,23 @@ export default function CardPropertyHorizontalCollection(props) {
   return (
     <Collection
       type="list"
-      isSearchable="true"
+      isSearchable={true}
       isPaginated={true}
       searchPlaceholder="Search..."
-      itemsPerPage={6}
+      itemsPerPage={4}
       direction="column"
       alignItems="stretch"
       justifyContent="left"
       items={items || []}
-      {...getOverrideProps(overrides, "CardPropertyHorizontalCollection")}
+      {...getOverrideProps(overrides, "CardPropertyVerticalCollection")}
       {...rest}
     >
       {(item, index) => (
-        <CardPropertyHorizontal
+        <CardPropertyVertical
           property={item}
           key={item.id}
           {...(overrideItems && overrideItems({ item, index }))}
-        ></CardPropertyHorizontal>
+        ></CardPropertyVertical>
       )}
     </Collection>
   );

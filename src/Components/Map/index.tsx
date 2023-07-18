@@ -12,11 +12,11 @@ const markers = [
     name: "Chicago, Illinois",
     position: { lat: 41.881832, lng: -87.623177 },
   },
-  {
+  /*   {
     id: 2,
     name: "Denver, Colorado",
     position: { lat: 39.739235, lng: -104.99025 },
-  },
+  }, */
   {
     id: 3,
     name: "Los Angeles, California",
@@ -60,6 +60,7 @@ function Map() {
         borderRadius: "15px",
       }}
     >
+      <Marker position={{ lat: 39.739235, lng: -104.99025 }} />
       {markers.map(({ id, name, position }) => (
         <Marker
           key={id}

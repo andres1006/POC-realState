@@ -1,13 +1,18 @@
 export type AmplifyDependentResourcesAttributes = {
   "api": {
-    "realState": {
+    "realStateREST": {
       "GraphQLAPIEndpointOutput": "string",
       "GraphQLAPIIdOutput": "string",
       "GraphQLAPIKeyOutput": "string"
+    },
+    "testrest": {
+      "ApiId": "string",
+      "ApiName": "string",
+      "RootUrl": "string"
     }
   },
   "auth": {
-    "realState": {
+    "realstaterest": {
       "AppClientID": "string",
       "AppClientIDWeb": "string",
       "IdentityPoolId": "string",
@@ -17,9 +22,12 @@ export type AmplifyDependentResourcesAttributes = {
       "UserPoolName": "string"
     }
   },
-  "storage": {
-    "s3realstatestorage8936c9d1": {
-      "BucketName": "string",
+  "function": {
+    "propertieslambda": {
+      "Arn": "string",
+      "LambdaExecutionRole": "string",
+      "LambdaExecutionRoleArn": "string",
+      "Name": "string",
       "Region": "string"
     }
   }

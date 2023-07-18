@@ -5,6 +5,7 @@
  **************************************************************************/
 
 import * as React from "react";
+import { Property } from "../models";
 import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
 import { FlexProps, IconProps, ImageProps, TextProps, ViewProps } from "@aws-amplify/ui-react";
 import { NewIconsProps } from "./NewIcons";
@@ -25,7 +26,7 @@ export declare type CardPropertyVerticalOverridesProps = {
     Line?: PrimitiveOverrideProps<IconProps>;
     "Name & Location"?: PrimitiveOverrideProps<FlexProps>;
     "Beverly Springfield"?: PrimitiveOverrideProps<TextProps>;
-    t?: PrimitiveOverrideProps<TextProps>;
+    tsafsafjkhasjhcklas?: PrimitiveOverrideProps<TextProps>;
     Price?: PrimitiveOverrideProps<FlexProps>;
     "$2,700"?: PrimitiveOverrideProps<TextProps>;
     "/month"?: PrimitiveOverrideProps<TextProps>;
@@ -34,6 +35,8 @@ export declare type CardPropertyVerticalOverridesProps = {
     "pexels-binyamin-mellish-106399 1"?: PrimitiveOverrideProps<ImageProps>;
 } & EscapeHatchProps;
 export declare type CardPropertyVerticalProps = React.PropsWithChildren<Partial<ViewProps> & {
+    property?: Property;
+} & {
     overrides?: CardPropertyVerticalOverridesProps | undefined | null;
 }>;
 export default function CardPropertyVertical(props: CardPropertyVerticalProps): React.ReactElement;

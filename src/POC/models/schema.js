@@ -10,57 +10,8 @@ export const schema = {
                     "isRequired": true,
                     "attributes": []
                 },
-                "nameStreet": {
-                    "name": "nameStreet",
-                    "isArray": false,
-                    "type": "String",
-                    "isRequired": false,
-                    "attributes": []
-                },
-                "bedsQuantity": {
-                    "name": "bedsQuantity",
-                    "isArray": false,
-                    "type": "Int",
-                    "isRequired": false,
-                    "attributes": []
-                },
-                "bathroomsQuantity": {
-                    "name": "bathroomsQuantity",
-                    "isArray": false,
-                    "type": "Int",
-                    "isRequired": false,
-                    "attributes": []
-                },
-                "dimension": {
-                    "name": "dimension",
-                    "isArray": false,
-                    "type": "String",
-                    "isRequired": false,
-                    "attributes": []
-                },
-                "priceXMonth": {
-                    "name": "priceXMonth",
-                    "isArray": false,
-                    "type": "Float",
-                    "isRequired": false,
-                    "attributes": []
-                },
-                "longitud": {
-                    "name": "longitud",
-                    "isArray": false,
-                    "type": "String",
-                    "isRequired": false,
-                    "attributes": []
-                },
-                "latitude": {
-                    "name": "latitude",
-                    "isArray": false,
-                    "type": "String",
-                    "isRequired": false,
-                    "attributes": []
-                },
-                "image": {
-                    "name": "image",
+                "streetName": {
+                    "name": "streetName",
                     "isArray": false,
                     "type": "String",
                     "isRequired": false,
@@ -70,6 +21,48 @@ export const schema = {
                     "name": "address",
                     "isArray": false,
                     "type": "String",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "bedsQuality": {
+                    "name": "bedsQuality",
+                    "isArray": false,
+                    "type": "Int",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "bathroomsQuelity": {
+                    "name": "bathroomsQuelity",
+                    "isArray": false,
+                    "type": "Int",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "urlImage": {
+                    "name": "urlImage",
+                    "isArray": false,
+                    "type": "AWSURL",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "longitud": {
+                    "name": "longitud",
+                    "isArray": false,
+                    "type": "Int",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "latitude": {
+                    "name": "latitude",
+                    "isArray": false,
+                    "type": "Int",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "price": {
+                    "name": "price",
+                    "isArray": false,
+                    "type": "Float",
                     "isRequired": false,
                     "attributes": []
                 },
@@ -118,6 +111,6 @@ export const schema = {
     },
     "enums": {},
     "nonModels": {},
-    "codegenVersion": "3.4.3",
-    "version": "453812730768a0af569a4fd70209ef39"
+    "codegenVersion": "3.4.4",
+    "version": "70ce836914c3907e1222879798d28628"
 };

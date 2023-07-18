@@ -23,54 +23,48 @@ export default function PropertyCreateForm(props) {
     ...rest
   } = props;
   const initialValues = {
-    nameStreet: "",
-    bedsQuantity: "",
-    bathroomsQuantity: "",
-    dimension: "",
-    priceXMonth: "",
+    streetName: "",
+    address: "",
+    bedsQuality: "",
+    bathroomsQuelity: "",
+    urlImage: "",
     longitud: "",
     latitude: "",
-    image: "",
-    address: "",
+    price: "",
   };
-  const [nameStreet, setNameStreet] = React.useState(initialValues.nameStreet);
-  const [bedsQuantity, setBedsQuantity] = React.useState(
-    initialValues.bedsQuantity
+  const [streetName, setStreetName] = React.useState(initialValues.streetName);
+  const [address, setAddress] = React.useState(initialValues.address);
+  const [bedsQuality, setBedsQuality] = React.useState(
+    initialValues.bedsQuality
   );
-  const [bathroomsQuantity, setBathroomsQuantity] = React.useState(
-    initialValues.bathroomsQuantity
+  const [bathroomsQuelity, setBathroomsQuelity] = React.useState(
+    initialValues.bathroomsQuelity
   );
-  const [dimension, setDimension] = React.useState(initialValues.dimension);
-  const [priceXMonth, setPriceXMonth] = React.useState(
-    initialValues.priceXMonth
-  );
+  const [urlImage, setUrlImage] = React.useState(initialValues.urlImage);
   const [longitud, setLongitud] = React.useState(initialValues.longitud);
   const [latitude, setLatitude] = React.useState(initialValues.latitude);
-  const [image, setImage] = React.useState(initialValues.image);
-  const [address, setAddress] = React.useState(initialValues.address);
+  const [price, setPrice] = React.useState(initialValues.price);
   const [errors, setErrors] = React.useState({});
   const resetStateValues = () => {
-    setNameStreet(initialValues.nameStreet);
-    setBedsQuantity(initialValues.bedsQuantity);
-    setBathroomsQuantity(initialValues.bathroomsQuantity);
-    setDimension(initialValues.dimension);
-    setPriceXMonth(initialValues.priceXMonth);
+    setStreetName(initialValues.streetName);
+    setAddress(initialValues.address);
+    setBedsQuality(initialValues.bedsQuality);
+    setBathroomsQuelity(initialValues.bathroomsQuelity);
+    setUrlImage(initialValues.urlImage);
     setLongitud(initialValues.longitud);
     setLatitude(initialValues.latitude);
-    setImage(initialValues.image);
-    setAddress(initialValues.address);
+    setPrice(initialValues.price);
     setErrors({});
   };
   const validations = {
-    nameStreet: [],
-    bedsQuantity: [],
-    bathroomsQuantity: [],
-    dimension: [],
-    priceXMonth: [],
+    streetName: [],
+    address: [],
+    bedsQuality: [],
+    bathroomsQuelity: [],
+    urlImage: [{ type: "URL" }],
     longitud: [],
     latitude: [],
-    image: [],
-    address: [],
+    price: [],
   };
   const runValidationTasks = async (
     fieldName,
@@ -98,15 +92,14 @@ export default function PropertyCreateForm(props) {
       onSubmit={async (event) => {
         event.preventDefault();
         let modelFields = {
-          nameStreet,
-          bedsQuantity,
-          bathroomsQuantity,
-          dimension,
-          priceXMonth,
+          streetName,
+          address,
+          bedsQuality,
+          bathroomsQuelity,
+          urlImage,
           longitud,
           latitude,
-          image,
-          address,
+          price,
         };
         const validationResponses = await Promise.all(
           Object.keys(validations).reduce((promises, fieldName) => {
@@ -153,197 +146,189 @@ export default function PropertyCreateForm(props) {
       {...rest}
     >
       <TextField
-        label="Name street"
+        label="Street name"
         isRequired={false}
         isReadOnly={false}
-        value={nameStreet}
+        value={streetName}
         onChange={(e) => {
           let { value } = e.target;
           if (onChange) {
             const modelFields = {
-              nameStreet: value,
-              bedsQuantity,
-              bathroomsQuantity,
-              dimension,
-              priceXMonth,
+              streetName: value,
+              address,
+              bedsQuality,
+              bathroomsQuelity,
+              urlImage,
               longitud,
               latitude,
-              image,
-              address,
+              price,
             };
             const result = onChange(modelFields);
-            value = result?.nameStreet ?? value;
+            value = result?.streetName ?? value;
           }
-          if (errors.nameStreet?.hasError) {
-            runValidationTasks("nameStreet", value);
+          if (errors.streetName?.hasError) {
+            runValidationTasks("streetName", value);
           }
-          setNameStreet(value);
+          setStreetName(value);
         }}
-        onBlur={() => runValidationTasks("nameStreet", nameStreet)}
-        errorMessage={errors.nameStreet?.errorMessage}
-        hasError={errors.nameStreet?.hasError}
-        {...getOverrideProps(overrides, "nameStreet")}
+        onBlur={() => runValidationTasks("streetName", streetName)}
+        errorMessage={errors.streetName?.errorMessage}
+        hasError={errors.streetName?.hasError}
+        {...getOverrideProps(overrides, "streetName")}
       ></TextField>
       <TextField
-        label="Beds quantity"
+        label="Address"
+        isRequired={false}
+        isReadOnly={false}
+        value={address}
+        onChange={(e) => {
+          let { value } = e.target;
+          if (onChange) {
+            const modelFields = {
+              streetName,
+              address: value,
+              bedsQuality,
+              bathroomsQuelity,
+              urlImage,
+              longitud,
+              latitude,
+              price,
+            };
+            const result = onChange(modelFields);
+            value = result?.address ?? value;
+          }
+          if (errors.address?.hasError) {
+            runValidationTasks("address", value);
+          }
+          setAddress(value);
+        }}
+        onBlur={() => runValidationTasks("address", address)}
+        errorMessage={errors.address?.errorMessage}
+        hasError={errors.address?.hasError}
+        {...getOverrideProps(overrides, "address")}
+      ></TextField>
+      <TextField
+        label="Beds quality"
         isRequired={false}
         isReadOnly={false}
         type="number"
         step="any"
-        value={bedsQuantity}
+        value={bedsQuality}
         onChange={(e) => {
           let value = isNaN(parseInt(e.target.value))
             ? e.target.value
             : parseInt(e.target.value);
           if (onChange) {
             const modelFields = {
-              nameStreet,
-              bedsQuantity: value,
-              bathroomsQuantity,
-              dimension,
-              priceXMonth,
+              streetName,
+              address,
+              bedsQuality: value,
+              bathroomsQuelity,
+              urlImage,
               longitud,
               latitude,
-              image,
-              address,
+              price,
             };
             const result = onChange(modelFields);
-            value = result?.bedsQuantity ?? value;
+            value = result?.bedsQuality ?? value;
           }
-          if (errors.bedsQuantity?.hasError) {
-            runValidationTasks("bedsQuantity", value);
+          if (errors.bedsQuality?.hasError) {
+            runValidationTasks("bedsQuality", value);
           }
-          setBedsQuantity(value);
+          setBedsQuality(value);
         }}
-        onBlur={() => runValidationTasks("bedsQuantity", bedsQuantity)}
-        errorMessage={errors.bedsQuantity?.errorMessage}
-        hasError={errors.bedsQuantity?.hasError}
-        {...getOverrideProps(overrides, "bedsQuantity")}
+        onBlur={() => runValidationTasks("bedsQuality", bedsQuality)}
+        errorMessage={errors.bedsQuality?.errorMessage}
+        hasError={errors.bedsQuality?.hasError}
+        {...getOverrideProps(overrides, "bedsQuality")}
       ></TextField>
       <TextField
-        label="Bathrooms quantity"
+        label="Bathrooms quelity"
         isRequired={false}
         isReadOnly={false}
         type="number"
         step="any"
-        value={bathroomsQuantity}
+        value={bathroomsQuelity}
         onChange={(e) => {
           let value = isNaN(parseInt(e.target.value))
             ? e.target.value
             : parseInt(e.target.value);
           if (onChange) {
             const modelFields = {
-              nameStreet,
-              bedsQuantity,
-              bathroomsQuantity: value,
-              dimension,
-              priceXMonth,
+              streetName,
+              address,
+              bedsQuality,
+              bathroomsQuelity: value,
+              urlImage,
               longitud,
               latitude,
-              image,
-              address,
+              price,
             };
             const result = onChange(modelFields);
-            value = result?.bathroomsQuantity ?? value;
+            value = result?.bathroomsQuelity ?? value;
           }
-          if (errors.bathroomsQuantity?.hasError) {
-            runValidationTasks("bathroomsQuantity", value);
+          if (errors.bathroomsQuelity?.hasError) {
+            runValidationTasks("bathroomsQuelity", value);
           }
-          setBathroomsQuantity(value);
+          setBathroomsQuelity(value);
         }}
-        onBlur={() =>
-          runValidationTasks("bathroomsQuantity", bathroomsQuantity)
-        }
-        errorMessage={errors.bathroomsQuantity?.errorMessage}
-        hasError={errors.bathroomsQuantity?.hasError}
-        {...getOverrideProps(overrides, "bathroomsQuantity")}
+        onBlur={() => runValidationTasks("bathroomsQuelity", bathroomsQuelity)}
+        errorMessage={errors.bathroomsQuelity?.errorMessage}
+        hasError={errors.bathroomsQuelity?.hasError}
+        {...getOverrideProps(overrides, "bathroomsQuelity")}
       ></TextField>
       <TextField
-        label="Dimension"
+        label="Url image"
         isRequired={false}
         isReadOnly={false}
-        value={dimension}
+        value={urlImage}
         onChange={(e) => {
           let { value } = e.target;
           if (onChange) {
             const modelFields = {
-              nameStreet,
-              bedsQuantity,
-              bathroomsQuantity,
-              dimension: value,
-              priceXMonth,
+              streetName,
+              address,
+              bedsQuality,
+              bathroomsQuelity,
+              urlImage: value,
               longitud,
               latitude,
-              image,
-              address,
+              price,
             };
             const result = onChange(modelFields);
-            value = result?.dimension ?? value;
+            value = result?.urlImage ?? value;
           }
-          if (errors.dimension?.hasError) {
-            runValidationTasks("dimension", value);
+          if (errors.urlImage?.hasError) {
+            runValidationTasks("urlImage", value);
           }
-          setDimension(value);
+          setUrlImage(value);
         }}
-        onBlur={() => runValidationTasks("dimension", dimension)}
-        errorMessage={errors.dimension?.errorMessage}
-        hasError={errors.dimension?.hasError}
-        {...getOverrideProps(overrides, "dimension")}
-      ></TextField>
-      <TextField
-        label="Price x month"
-        isRequired={false}
-        isReadOnly={false}
-        type="number"
-        step="any"
-        value={priceXMonth}
-        onChange={(e) => {
-          let value = isNaN(parseFloat(e.target.value))
-            ? e.target.value
-            : parseFloat(e.target.value);
-          if (onChange) {
-            const modelFields = {
-              nameStreet,
-              bedsQuantity,
-              bathroomsQuantity,
-              dimension,
-              priceXMonth: value,
-              longitud,
-              latitude,
-              image,
-              address,
-            };
-            const result = onChange(modelFields);
-            value = result?.priceXMonth ?? value;
-          }
-          if (errors.priceXMonth?.hasError) {
-            runValidationTasks("priceXMonth", value);
-          }
-          setPriceXMonth(value);
-        }}
-        onBlur={() => runValidationTasks("priceXMonth", priceXMonth)}
-        errorMessage={errors.priceXMonth?.errorMessage}
-        hasError={errors.priceXMonth?.hasError}
-        {...getOverrideProps(overrides, "priceXMonth")}
+        onBlur={() => runValidationTasks("urlImage", urlImage)}
+        errorMessage={errors.urlImage?.errorMessage}
+        hasError={errors.urlImage?.hasError}
+        {...getOverrideProps(overrides, "urlImage")}
       ></TextField>
       <TextField
         label="Longitud"
         isRequired={false}
         isReadOnly={false}
+        type="number"
+        step="any"
         value={longitud}
         onChange={(e) => {
-          let { value } = e.target;
+          let value = isNaN(parseInt(e.target.value))
+            ? e.target.value
+            : parseInt(e.target.value);
           if (onChange) {
             const modelFields = {
-              nameStreet,
-              bedsQuantity,
-              bathroomsQuantity,
-              dimension,
-              priceXMonth,
+              streetName,
+              address,
+              bedsQuality,
+              bathroomsQuelity,
+              urlImage,
               longitud: value,
               latitude,
-              image,
-              address,
+              price,
             };
             const result = onChange(modelFields);
             value = result?.longitud ?? value;
@@ -362,20 +347,23 @@ export default function PropertyCreateForm(props) {
         label="Latitude"
         isRequired={false}
         isReadOnly={false}
+        type="number"
+        step="any"
         value={latitude}
         onChange={(e) => {
-          let { value } = e.target;
+          let value = isNaN(parseInt(e.target.value))
+            ? e.target.value
+            : parseInt(e.target.value);
           if (onChange) {
             const modelFields = {
-              nameStreet,
-              bedsQuantity,
-              bathroomsQuantity,
-              dimension,
-              priceXMonth,
+              streetName,
+              address,
+              bedsQuality,
+              bathroomsQuelity,
+              urlImage,
               longitud,
               latitude: value,
-              image,
-              address,
+              price,
             };
             const result = onChange(modelFields);
             value = result?.latitude ?? value;
@@ -391,68 +379,39 @@ export default function PropertyCreateForm(props) {
         {...getOverrideProps(overrides, "latitude")}
       ></TextField>
       <TextField
-        label="Image"
+        label="Price"
         isRequired={false}
         isReadOnly={false}
-        value={image}
+        type="number"
+        step="any"
+        value={price}
         onChange={(e) => {
-          let { value } = e.target;
+          let value = isNaN(parseFloat(e.target.value))
+            ? e.target.value
+            : parseFloat(e.target.value);
           if (onChange) {
             const modelFields = {
-              nameStreet,
-              bedsQuantity,
-              bathroomsQuantity,
-              dimension,
-              priceXMonth,
-              longitud,
-              latitude,
-              image: value,
+              streetName,
               address,
-            };
-            const result = onChange(modelFields);
-            value = result?.image ?? value;
-          }
-          if (errors.image?.hasError) {
-            runValidationTasks("image", value);
-          }
-          setImage(value);
-        }}
-        onBlur={() => runValidationTasks("image", image)}
-        errorMessage={errors.image?.errorMessage}
-        hasError={errors.image?.hasError}
-        {...getOverrideProps(overrides, "image")}
-      ></TextField>
-      <TextField
-        label="Address"
-        isRequired={false}
-        isReadOnly={false}
-        value={address}
-        onChange={(e) => {
-          let { value } = e.target;
-          if (onChange) {
-            const modelFields = {
-              nameStreet,
-              bedsQuantity,
-              bathroomsQuantity,
-              dimension,
-              priceXMonth,
+              bedsQuality,
+              bathroomsQuelity,
+              urlImage,
               longitud,
               latitude,
-              image,
-              address: value,
+              price: value,
             };
             const result = onChange(modelFields);
-            value = result?.address ?? value;
+            value = result?.price ?? value;
           }
-          if (errors.address?.hasError) {
-            runValidationTasks("address", value);
+          if (errors.price?.hasError) {
+            runValidationTasks("price", value);
           }
-          setAddress(value);
+          setPrice(value);
         }}
-        onBlur={() => runValidationTasks("address", address)}
-        errorMessage={errors.address?.errorMessage}
-        hasError={errors.address?.hasError}
-        {...getOverrideProps(overrides, "address")}
+        onBlur={() => runValidationTasks("price", price)}
+        errorMessage={errors.price?.errorMessage}
+        hasError={errors.price?.hasError}
+        {...getOverrideProps(overrides, "price")}
       ></TextField>
       <Flex
         justifyContent="space-between"

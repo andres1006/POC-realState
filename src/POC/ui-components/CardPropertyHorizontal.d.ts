@@ -5,7 +5,6 @@
  **************************************************************************/
 
 import * as React from "react";
-import { Property } from "../models";
 import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
 import { FlexProps, IconProps, ImageProps, TextProps, ViewProps } from "@aws-amplify/ui-react";
 import { NewIconsProps } from "./NewIcons";
@@ -39,11 +38,6 @@ export declare type CardPropertyHorizontalOverridesProps = {
     Line?: PrimitiveOverrideProps<IconProps>;
 } & EscapeHatchProps;
 export declare type CardPropertyHorizontalProps = React.PropsWithChildren<Partial<ViewProps> & {
-    cardPropertyHorizontal?: React.ReactNode;
-    Value?: Number;
-    property?: Property;
-    barrio?: String;
-} & {
     overrides?: CardPropertyHorizontalOverridesProps | undefined | null;
 }>;
 export default function CardPropertyHorizontal(props: CardPropertyHorizontalProps): React.ReactElement;

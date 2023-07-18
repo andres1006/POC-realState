@@ -1,6 +1,6 @@
 {
   "api": {
-    "realState": {
+    "realStateREST": {
       "dependsOn": [],
       "output": {
         "authConfig": {
@@ -20,11 +20,24 @@
       },
       "providerPlugin": "awscloudformation",
       "service": "AppSync"
+    },
+    "testrest": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "propertieslambda"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
     }
   },
   "auth": {
-    "realState": {
-      "customAuth": false,
+    "realstaterest": {
       "dependsOn": [],
       "frontendAuthConfig": {
         "mfaConfiguration": "OFF",
@@ -32,32 +45,54 @@
           "SMS"
         ],
         "passwordProtectionSettings": {
-          "passwordPolicyCharacters": [
-            "REQUIRES_LOWERCASE",
-            "REQUIRES_NUMBERS",
-            "REQUIRES_SYMBOLS",
-            "REQUIRES_UPPERCASE"
-          ],
+          "passwordPolicyCharacters": [],
           "passwordPolicyMinLength": 8
         },
-        "signupAttributes": [],
-        "socialProviders": [],
-        "usernameAttributes": [
+        "signupAttributes": [
           "EMAIL"
         ],
+        "socialProviders": [],
+        "usernameAttributes": [],
         "verificationMechanisms": [
           "EMAIL"
         ]
       },
       "providerPlugin": "awscloudformation",
-      "service": "Cognito"
+      "service": "Cognito",
+      "serviceType": "managed"
+    }
+  },
+  "function": {
+    "propertieslambda": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_propertieslambda_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "propertieslambda"
+        }
+      ]
+    },
+    "AMPLIFY_function_propertieslambda_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "propertieslambda"
+        }
+      ]
     }
   },
   "storage": {
-    "s3realstatestorage8936c9d1": {
+    "realstaterestf18d5c9f": {
       "dependsOn": [],
       "providerPlugin": "awscloudformation",
-      "service": "S3"
+      "service": "S3",
+      "serviceType": "imported"
     }
   }
 }

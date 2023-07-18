@@ -12,15 +12,14 @@ type EagerProperty = {
     readOnlyFields: 'createdAt' | 'updatedAt';
   };
   readonly id: string;
-  readonly nameStreet?: string | null;
-  readonly bedsQuantity?: number | null;
-  readonly bathroomsQuantity?: number | null;
-  readonly dimension?: string | null;
-  readonly priceXMonth?: number | null;
-  readonly longitud?: string | null;
-  readonly latitude?: string | null;
-  readonly image?: string | null;
+  readonly streetName?: string | null;
   readonly address?: string | null;
+  readonly bedsQuality?: number | null;
+  readonly bathroomsQuelity?: number | null;
+  readonly urlImage?: string | null;
+  readonly longitud?: number | null;
+  readonly latitude?: number | null;
+  readonly price?: number | null;
   readonly createdAt?: string | null;
   readonly updatedAt?: string | null;
 }
@@ -31,15 +30,14 @@ type LazyProperty = {
     readOnlyFields: 'createdAt' | 'updatedAt';
   };
   readonly id: string;
-  readonly nameStreet?: string | null;
-  readonly bedsQuantity?: number | null;
-  readonly bathroomsQuantity?: number | null;
-  readonly dimension?: string | null;
-  readonly priceXMonth?: number | null;
-  readonly longitud?: string | null;
-  readonly latitude?: string | null;
-  readonly image?: string | null;
+  readonly streetName?: string | null;
   readonly address?: string | null;
+  readonly bedsQuality?: number | null;
+  readonly bathroomsQuelity?: number | null;
+  readonly urlImage?: string | null;
+  readonly longitud?: number | null;
+  readonly latitude?: number | null;
+  readonly price?: number | null;
   readonly createdAt?: string | null;
   readonly updatedAt?: string | null;
 }

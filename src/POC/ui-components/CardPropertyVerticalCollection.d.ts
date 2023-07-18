@@ -6,20 +6,20 @@
 
 import * as React from "react";
 import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
-import { CardPropertyHorizontalProps } from "./CardPropertyHorizontal";
+import { CardPropertyVerticalProps } from "./CardPropertyVertical";
 import { CollectionProps } from "@aws-amplify/ui-react";
 export declare type PrimitiveOverrideProps<T> = Partial<T> & React.DOMAttributes<HTMLDivElement>;
-export declare type CardPropertyHorizontalCollectionOverridesProps = {
-    CardPropertyHorizontalCollection?: PrimitiveOverrideProps<CollectionProps>;
-    CardPropertyHorizontal?: CardPropertyHorizontalProps;
+export declare type CardPropertyVerticalCollectionOverridesProps = {
+    CardPropertyVerticalCollection?: PrimitiveOverrideProps<CollectionProps>;
+    CardPropertyVertical?: CardPropertyVerticalProps;
 } & EscapeHatchProps;
-export declare type CardPropertyHorizontalCollectionProps = React.PropsWithChildren<Partial<CollectionProps<any>> & {
+export declare type CardPropertyVerticalCollectionProps = React.PropsWithChildren<Partial<CollectionProps<any>> & {
     items?: any[];
     overrideItems?: (collectionItem: {
         item: any;
         index: number;
-    }) => CardPropertyHorizontalProps;
+    }) => CardPropertyVerticalProps;
 } & {
-    overrides?: CardPropertyHorizontalCollectionOverridesProps | undefined | null;
+    overrides?: CardPropertyVerticalCollectionOverridesProps | undefined | null;
 }>;
-export default function CardPropertyHorizontalCollection(props: CardPropertyHorizontalCollectionProps): React.ReactElement;
+export default function CardPropertyVerticalCollection(props: CardPropertyVerticalCollectionProps): React.ReactElement;

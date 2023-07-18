@@ -10,14 +10,7 @@ import { getOverrideProps } from "@aws-amplify/ui-react/internal";
 import { Flex, Icon, Image, Text, View } from "@aws-amplify/ui-react";
 import NewIcons from "./NewIcons";
 export default function CardPropertyHorizontal(props) {
-  const {
-    cardPropertyHorizontal,
-    Value,
-    property,
-    barrio,
-    overrides,
-    ...rest
-  } = props;
+  const { overrides, ...rest } = props;
   return (
     <View
       width="640px"
@@ -145,7 +138,7 @@ export default function CardPropertyHorizontal(props) {
           right="4.22%"
           padding="0px 0px 0px 0px"
           whiteSpace="pre-wrap"
-          children={property?.nameStreet}
+          children="St. Crystal"
           {...getOverrideProps(overrides, "St. Crystal")}
         ></Text>
         <Text
@@ -169,7 +162,7 @@ export default function CardPropertyHorizontal(props) {
           right="0%"
           padding="0px 0px 0px 0px"
           whiteSpace="pre-wrap"
-          children={property?.address}
+          children="210 US Highway, Highland Lake, FL"
           {...getOverrideProps(overrides, "210 US Highway, Highland Lake, FL")}
         ></Text>
         <View
@@ -221,13 +214,13 @@ export default function CardPropertyHorizontal(props) {
               position="relative"
               padding="0px 0px 0px 0px"
               whiteSpace="pre-wrap"
-              children={`${"$"}${property?.priceXMonth}`}
+              children="$2,400"
               {...getOverrideProps(overrides, "$2,400")}
             ></Text>
             <Text
               fontFamily="Plus Jakarta Sans"
               fontSize="14px"
-              fontWeight="400"
+              fontWeight="500"
               color="rgba(0,9,41,1)"
               lineHeight="19.600000381469727px"
               textAlign="left"
@@ -290,7 +283,7 @@ export default function CardPropertyHorizontal(props) {
             <Text
               fontFamily="Plus Jakarta Sans"
               fontSize="14px"
-              fontWeight="400"
+              fontWeight="500"
               color="rgba(0,9,41,1)"
               lineHeight="19.600000381469727px"
               textAlign="left"
@@ -305,7 +298,7 @@ export default function CardPropertyHorizontal(props) {
               position="relative"
               padding="0px 0px 0px 0px"
               whiteSpace="pre-wrap"
-              children={property?.bedsQuantity}
+              children="4"
               {...getOverrideProps(overrides, "4")}
             ></Text>
           </Flex>
@@ -337,7 +330,7 @@ export default function CardPropertyHorizontal(props) {
             <Text
               fontFamily="Plus Jakarta Sans"
               fontSize="14px"
-              fontWeight="400"
+              fontWeight="500"
               color="rgba(0,9,41,1)"
               lineHeight="19.600000381469727px"
               textAlign="left"
@@ -352,7 +345,7 @@ export default function CardPropertyHorizontal(props) {
               position="relative"
               padding="0px 0px 0px 0px"
               whiteSpace="pre-wrap"
-              children={property?.bathroomsQuantity}
+              children="2"
               {...getOverrideProps(overrides, "2")}
             ></Text>
           </Flex>
@@ -399,7 +392,7 @@ export default function CardPropertyHorizontal(props) {
               position="relative"
               padding="0px 0px 0px 0px"
               whiteSpace="pre-wrap"
-              children={`${property?.dimension}${"m2"}`}
+              children="6x8 m²"
               {...getOverrideProps(overrides, "6x8 m\u00B2")}
             ></Text>
           </Flex>
@@ -452,7 +445,6 @@ export default function CardPropertyHorizontal(props) {
           borderRadius="8px 0px 0px 8px"
           padding="0px 0px 0px 0px"
           objectFit="cover"
-          src={property?.image}
           {...getOverrideProps(overrides, "pexels-binyamin-mellish-1396122 1")}
         ></Image>
       </View>

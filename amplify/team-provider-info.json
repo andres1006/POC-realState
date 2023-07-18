@@ -1,22 +1,26 @@
 {
   "staging": {
     "awscloudformation": {
-      "AuthRoleName": "amplify-realstate-staging-215201-authRole",
-      "UnauthRoleArn": "arn:aws:iam::022696952742:role/amplify-realstate-staging-215201-unauthRole",
-      "AuthRoleArn": "arn:aws:iam::022696952742:role/amplify-realstate-staging-215201-authRole",
+      "AuthRoleName": "amplify-realstaterest-staging-23505-authRole",
+      "UnauthRoleArn": "arn:aws:iam::022696952742:role/amplify-realstaterest-staging-23505-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::022696952742:role/amplify-realstaterest-staging-23505-authRole",
       "Region": "us-east-2",
-      "DeploymentBucketName": "amplify-realstate-staging-215201-deployment",
-      "UnauthRoleName": "amplify-realstate-staging-215201-unauthRole",
-      "StackName": "amplify-realstate-staging-215201",
-      "StackId": "arn:aws:cloudformation:us-east-2:022696952742:stack/amplify-realstate-staging-215201/e56de0c0-ef7c-11ed-9b50-02083fdf7e75",
-      "AmplifyAppId": "d14v2cbxip2bfo"
+      "DeploymentBucketName": "amplify-realstaterest-staging-23505-deployment",
+      "UnauthRoleName": "amplify-realstaterest-staging-23505-unauthRole",
+      "StackName": "amplify-realstaterest-staging-23505",
+      "StackId": "arn:aws:cloudformation:us-east-2:022696952742:stack/amplify-realstaterest-staging-23505/b4c2dda0-2513-11ee-9ac8-0ab9ed53405f",
+      "AmplifyAppId": "d1zttpbryx46pp",
+      "APIGatewayAuthURL": "https://s3.amazonaws.com/amplify-realstaterest-staging-23505-deployment/amplify-cfn-templates/api/APIGatewayAuthStack.json"
     },
     "categories": {
       "auth": {
-        "realState": {}
+        "realstaterest": {}
       },
-      "storage": {
-        "s3realstatestorage8936c9d1": {}
+      "function": {
+        "propertieslambda": {
+          "deploymentBucketName": "amplify-realstaterest-staging-23505-deployment",
+          "s3Key": "amplify-builds/propertieslambda-483572594f4761585441-build.zip"
+        }
       }
     }
   }
