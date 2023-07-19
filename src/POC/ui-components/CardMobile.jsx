@@ -12,8 +12,8 @@ export default function CardMobile(props) {
   const { overrides, ...rest } = props;
   return (
     <View
-      width="331px"
-      height="431px"
+      width="385px"
+      height="390px"
       display="block"
       gap="unset"
       alignItems="unset"
@@ -24,8 +24,8 @@ export default function CardMobile(props) {
       {...rest}
     >
       <View
-        width="327px"
-        height="416px"
+        width="380.35px"
+        height="376.43px"
         display="block"
         gap="unset"
         alignItems="unset"
@@ -42,23 +42,23 @@ export default function CardMobile(props) {
         {...getOverrideProps(overrides, "Rounded rectangle")}
       ></View>
       <View
-        width="48px"
-        height="48px"
+        width="55.83px"
+        height="43.43px"
         {...getOverrideProps(overrides, "Favorited")}
       ></View>
       <View
-        width="128px"
-        height="36px"
+        width="148.88px"
+        height="32.58px"
         {...getOverrideProps(overrides, "Tarpon Bay")}
       ></View>
       <View
-        width="93px"
-        height="24px"
+        width="108.17px"
+        height="21.72px"
         {...getOverrideProps(overrides, "Michigan, IN")}
       ></View>
       <View
-        width="144px"
-        height="36px"
+        width="167.49px"
+        height="32.58px"
         {...getOverrideProps(overrides, "Group 863")}
       ></View>
       <Flex
@@ -69,10 +69,10 @@ export default function CardMobile(props) {
         justifyContent="center"
         alignItems="flex-start"
         position="absolute"
-        top="86.31%"
-        bottom="9.05%"
-        left="7.25%"
-        right="38.37%"
+        top="86.07%"
+        bottom="8.8%"
+        left="11.06%"
+        right="42.18%"
         padding="0px 0px 0px 0px"
         {...getOverrideProps(overrides, "Facilities")}
       >
@@ -374,12 +374,12 @@ export default function CardMobile(props) {
         </Flex>
       </Flex>
       <Icon
-        width="279px"
+        width="324.52px"
         height="0px"
-        viewBox={{ minX: 0, minY: 0, width: 279, height: 1 }}
+        viewBox={{ minX: 0, minY: 0, width: 324.5166015625, height: 1 }}
         paths={[
           {
-            d: "M0 1.11022e-16L279 1.11022e-16L279 -1.5L0 -1.5L0 1.11022e-16Z",
+            d: "M0 1.11022e-16L324.517 1.11022e-16L324.517 -1.5L0 -1.5L0 1.11022e-16Z",
             stroke: "rgba(240,239,251,1)",
             fillRule: "nonzero",
             strokeWidth: 1,
@@ -398,8 +398,8 @@ export default function CardMobile(props) {
       ></Icon>
       <View
         padding="0px 0px 0px 0px"
-        width="327px"
-        height="200px"
+        width="380.35px"
+        height="180.97px"
         display="block"
         gap="unset"
         alignItems="unset"
@@ -412,8 +412,8 @@ export default function CardMobile(props) {
         {...getOverrideProps(overrides, "Image")}
       >
         <View
-          width="327px"
-          height="200px"
+          width="380.35px"
+          height="180.97px"
           display="block"
           gap="unset"
           alignItems="unset"

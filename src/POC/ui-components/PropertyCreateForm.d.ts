@@ -17,7 +17,7 @@ export declare type PropertyCreateFormInputValues = {
     addressName?: string;
     price?: number;
     numbersBed?: number;
-    numberBathroos?: string;
+    numberBathroos?: number;
     dimension?: string;
     longitud?: number;
     latitude?: number;
@@ -28,7 +28,7 @@ export declare type PropertyCreateFormValidationValues = {
     addressName?: ValidationFunction<string>;
     price?: ValidationFunction<number>;
     numbersBed?: ValidationFunction<number>;
-    numberBathroos?: ValidationFunction<string>;
+    numberBathroos?: ValidationFunction<number>;
     dimension?: ValidationFunction<string>;
     longitud?: ValidationFunction<number>;
     latitude?: ValidationFunction<number>;

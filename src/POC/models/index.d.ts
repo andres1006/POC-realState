@@ -16,7 +16,7 @@ type EagerProperty = {
   readonly addressName: string;
   readonly price: number;
   readonly numbersBed?: number | null;
-  readonly numberBathroos?: string | null;
+  readonly numberBathroos?: number | null;
   readonly dimension?: string | null;
   readonly longitud?: number | null;
   readonly latitude?: number | null;
@@ -35,7 +35,7 @@ type LazyProperty = {
   readonly addressName: string;
   readonly price: number;
   readonly numbersBed?: number | null;
-  readonly numberBathroos?: string | null;
+  readonly numberBathroos?: number | null;
   readonly dimension?: string | null;
   readonly longitud?: number | null;
   readonly latitude?: number | null;

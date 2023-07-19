@@ -18,6 +18,7 @@ export { default as TallCard } from "./TallCard";
 export { default as ActionCard } from "./ActionCard";
 export { default as ContactUs } from "./ContactUs";
 export { default as NavBar } from "./NavBar";
+export { default as CardPropertyHorizontalCollection } from "./CardPropertyHorizontalCollection";
 export { default as ProfileCard } from "./ProfileCard";
 export { default as NewIcons } from "./NewIcons";
 export { default as FilterProperties } from "./FilterProperties";

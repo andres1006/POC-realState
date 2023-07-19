@@ -105,7 +105,7 @@ export default function TopBarProp(props) {
           >
             <View
               padding="0px 0px 0px 0px"
-              width="118px"
+              width="111px"
               height="32px"
               display="block"
               gap="unset"
@@ -117,7 +117,7 @@ export default function TopBarProp(props) {
               {...getOverrideProps(overrides, "Group 100")}
             >
               <Text
-                fontFamily="Plus Jakarta Sans"
+                fontFamily="Roboto"
                 fontSize="20px"
                 fontWeight="700"
                 color="rgba(16,10,85,1)"
@@ -290,7 +290,7 @@ export default function TopBarProp(props) {
                 {...getOverrideProps(overrides, "Rectangle 2553")}
               ></View>
               <Text
-                fontFamily="Plus Jakarta Sans"
+                fontFamily="Roboto"
                 fontSize="16px"
                 fontWeight="700"
                 color="rgba(112,101,240,1)"
@@ -307,7 +307,7 @@ export default function TopBarProp(props) {
                 top="20%"
                 bottom="20%"
                 left="23.53%"
-                right="23.53%"
+                right="26.47%"
                 padding="0px 0px 0px 0px"
                 whiteSpace="pre-wrap"
                 children="Rent"
@@ -328,7 +328,7 @@ export default function TopBarProp(props) {
             {...getOverrideProps(overrides, "Menu Item / Default37884342")}
           >
             <Text
-              fontFamily="Plus Jakarta Sans"
+              fontFamily="Roboto"
               fontSize="16px"
               fontWeight="500"
               color="rgba(0,9,41,1)"
@@ -362,7 +362,7 @@ export default function TopBarProp(props) {
             {...getOverrideProps(overrides, "Menu Item / Default37884344")}
           >
             <Text
-              fontFamily="Plus Jakarta Sans"
+              fontFamily="Roboto"
               fontSize="16px"
               fontWeight="500"
               color="rgba(0,9,41,1)"
@@ -396,7 +396,7 @@ export default function TopBarProp(props) {
             {...getOverrideProps(overrides, "Header menu / Default37884346")}
           >
             <Text
-              fontFamily="Plus Jakarta Sans"
+              fontFamily="Roboto"
               fontSize="16px"
               fontWeight="500"
               color="rgba(0,9,41,1)"
@@ -435,7 +435,7 @@ export default function TopBarProp(props) {
             {...getOverrideProps(overrides, "Header menu / Default37884349")}
           >
             <Text
-              fontFamily="Plus Jakarta Sans"
+              fontFamily="Roboto"
               fontSize="16px"
               fontWeight="500"
               color="rgba(0,9,41,1)"

@@ -4,9 +4,10 @@ type Property @model @auth(rules: [{allow: public}]) {
   addressName: String!
   price: Float!
   numbersBed: Int
-  numberBathroos: String
+  numberBathroos: Int
   dimension: String
   longitud: Int
   latitude: Int
   urlImage: AWSURL
 }
+ 

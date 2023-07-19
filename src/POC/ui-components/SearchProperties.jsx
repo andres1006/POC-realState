@@ -41,12 +41,12 @@ export default function SearchProperties(props) {
         <SearchField
           width="459px"
           height="unset"
+          placeholder="Buscar..."
           position="absolute"
           top="0%"
           bottom="0%"
           left="0%"
           right="29.17%"
-          placeholder="Placeholder"
           size="default"
           isDisabled={false}
           labelHidden={true}
@@ -64,7 +64,7 @@ export default function SearchProperties(props) {
           size="default"
           isDisabled={false}
           variation="primary"
-          children="More filters"
+          children="Más filtros"
           {...getOverrideProps(overrides, "Button")}
         ></Button>
       </View>
@@ -78,13 +78,13 @@ export default function SearchProperties(props) {
         position="absolute"
         top="15.5%"
         bottom="55.81%"
-        left="0%"
-        right="57.56%"
+        left="0.39%"
+        right="57.95%"
         padding="0px 0px 0px 0px"
         {...getOverrideProps(overrides, "Title")}
       >
         <Text
-          fontFamily="Plus Jakarta Sans"
+          fontFamily="Roboto"
           fontSize="32px"
           fontWeight="700"
           color="rgba(16,10,85,1)"
@@ -118,7 +118,7 @@ export default function SearchProperties(props) {
           {...getOverrideProps(overrides, "Frame 866")}
         >
           <Text
-            fontFamily="Plus Jakarta Sans"
+            fontFamily="Roboto"
             fontSize="16px"
             fontWeight="500"
             color="rgba(16,10,85,1)"
@@ -171,13 +171,13 @@ export default function SearchProperties(props) {
         position="absolute"
         top="0%"
         bottom="90.7%"
-        left="-0.31%"
-        right="79.17%"
+        left="0%"
+        right="79.48%"
         padding="0px 0px 0px 0px"
         {...getOverrideProps(overrides, "Breadcrumb")}
       >
         <Text
-          fontFamily="Plus Jakarta Sans"
+          fontFamily="Roboto"
           fontSize="16px"
           fontWeight="500"
           color="rgba(16,10,85,1)"

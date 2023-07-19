@@ -14,11 +14,12 @@ export default function CardPropertyVertical(props) {
   return (
     <View
       width="385px"
-      height="424px"
+      height="399px"
       display="block"
       gap="unset"
       alignItems="unset"
       justifyContent="unset"
+      overflow="hidden"
       position="relative"
       padding="0px 0px 0px 0px"
       {...getOverrideProps(overrides, "CardPropertyVertical")}
@@ -26,7 +27,7 @@ export default function CardPropertyVertical(props) {
     >
       <View
         width="385px"
-        height="424px"
+        height="399px"
         display="block"
         gap="unset"
         alignItems="unset"
@@ -46,7 +47,7 @@ export default function CardPropertyVertical(props) {
         gap="16px"
         direction="row"
         width="337.81px"
-        height="30px"
+        height="28.23px"
         justifyContent="flex-start"
         alignItems="flex-start"
         position="absolute"
@@ -230,7 +231,7 @@ export default function CardPropertyVertical(props) {
         justifyContent="flex-start"
         alignItems="flex-start"
         position="absolute"
-        top="calc(50% - 34px - -94px)"
+        top="calc(50% - 34px - -94.5px)"
         left="5.8%"
         right="22.51%"
         padding="0px 0px 0px 0px"
@@ -288,7 +289,7 @@ export default function CardPropertyVertical(props) {
         justifyContent="flex-start"
         alignItems="flex-start"
         position="absolute"
-        top="calc(50% - 18px - -38px)"
+        top="calc(50% - 18px - -38.5px)"
         left="5.85%"
         right="2.44%"
         padding="0px 0px 0px 0px"
@@ -341,7 +342,7 @@ export default function CardPropertyVertical(props) {
       <View
         padding="0px 0px 0px 0px"
         width="385px"
-        height="200px"
+        height="188.21px"
         display="block"
         gap="unset"
         alignItems="unset"
@@ -355,7 +356,7 @@ export default function CardPropertyVertical(props) {
       >
         <View
           width="385px"
-          height="200px"
+          height="188.21px"
           display="block"
           gap="unset"
           alignItems="unset"

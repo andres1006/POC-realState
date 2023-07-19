@@ -1,0 +1,14 @@
+{
+  "resourceName": "s3realstatestorage2aa3c56d",
+  "bucketName": "realstate-storage-2aa3c56d",
+  "policyUUID": "578cc0c0",
+  "storageAccess": "authAndGuest",
+  "guestAccess": [
+    "READ"
+  ],
+  "authAccess": [
+    "CREATE_AND_UPDATE",
+    "READ",
+    "DELETE"
+  ]
+}

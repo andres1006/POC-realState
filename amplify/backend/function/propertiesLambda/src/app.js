@@ -12,6 +12,8 @@ See the License for the specific language governing permissions and limitations 
 const express = require('express')
 const bodyParser = require('body-parser')
 const awsServerlessExpressMiddleware = require('aws-serverless-express/middleware')
+const AWS = require('aws-sdk');
+const docClient = new AWS.DynamoDB.DocumentClient();
 
 // declare a new express app
 const app = express()
@@ -30,9 +32,17 @@ app.use(function(req, res, next) {
  * Example get method *
  **********************/
 
-app.get('/properties', function(req, res) {
+app.get('/properties', async function(req, res) {
   // Add your code here
-  res.json({success: 'get call succeed!', url: req.url});
+  let data = null
+  try {
+    data = await docClient.get({
+      TableName : 'Property-fo5ovfhdqvfjpnxzy5w75rxowm-staging',
+    }).promise()
+  } catch (err) {
+    data = { error: err }
+  }
+  res.json({success: 'get call succeed!', url: req.url, data: JSON.stringify(data)});
 });
 
 app.get('/properties/*', function(req, res) {

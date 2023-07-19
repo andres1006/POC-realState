@@ -4,7 +4,7 @@ import { View } from "@aws-amplify/ui-react";
 
 import {
   SearchProperties,
-  CardPropertyHorizontal,
+  CardPropertyHorizontalCollection,
 } from "../../POC/ui-components";
 
 function Search() {
@@ -41,7 +41,7 @@ function Search() {
         }}
       >
         {/* <PropertyCreateForm /> */}
-        <CardPropertyHorizontal />
+        <CardPropertyHorizontalCollection />
       </View>
     </View>
   );
