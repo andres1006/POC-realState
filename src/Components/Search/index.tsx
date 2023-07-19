@@ -3,7 +3,7 @@ import React from "react";
 import { View } from "@aws-amplify/ui-react";
 
 import {
-  SearchProperties,
+  /*  SearchProperties, */
   CardPropertyHorizontalCollection,
 } from "../../POC/ui-components";
 
@@ -18,7 +18,7 @@ function Search() {
         flexDirection: "column",
       }}
     >
-      <View
+      {/*  <View
         style={{
           height: "auto",
           display: "flex",
@@ -26,9 +26,9 @@ function Search() {
           flexDirection: "column",
         }}
       >
-        {/* <PropertyCreateForm /> */}
+        <PropertyCreateForm />
         <SearchProperties />
-      </View>
+      </View> */}
       <View
         style={{
           width: "100%",

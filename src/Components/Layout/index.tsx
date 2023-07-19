@@ -28,7 +28,7 @@ const Layout = () => {
         <View style={{ width: "50%", padding: "10px" }}>
           <Map />
         </View>
-        <View style={{ padding: "10px" }}>
+        <View style={{ padding: "10px", width: "50%" }}>
           <Search />
         </View>
       </View>
