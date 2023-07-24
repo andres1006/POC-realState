@@ -12,8 +12,18 @@ See the License for the specific language governing permissions and limitations 
 const express = require('express')
 const bodyParser = require('body-parser')
 const awsServerlessExpressMiddleware = require('aws-serverless-express/middleware')
-const AWS = require('aws-sdk');
-const docClient = new AWS.DynamoDB.DocumentClient();
+const AWS = require("aws-sdk");
+const AWS_REGION = "us-east-2";
+
+AWS.config.update({
+  region: AWS_REGION,
+  accessKeyId: 'AKIAQKSGYAOTEVFM2JCN',
+  accessSecretKey: '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',
+
+});
+
+const clientDynamoDB = new AWS.DynamoDB.DocumentClient();
+const tableName = "Property-fo5ovfhdqvfjpnxzy5w75rxowm-staging";
 
 // declare a new express app
 const app = express()
@@ -34,15 +44,17 @@ app.use(function(req, res, next) {
 
 app.get('/properties', async function(req, res) {
   // Add your code here
-  let data = null
+  let response = null
+  const params = { TableName: tableName};
   try {
-    data = await docClient.get({
-      TableName : 'Property-fo5ovfhdqvfjpnxzy5w75rxowm-staging',
-    }).promise()
+    //const command = new AWS.GetItemCommand(params);
+    response = await clientDynamoDB.scan(params).promise();
+    response = { body: response }
   } catch (err) {
-    data = { error: err }
+    response = { error: err }
+    res.json({error: 'get call error!', url: req.url, data: response });
   }
-  res.json({success: 'get call succeed!', url: req.url, data: JSON.stringify(data)});
+  res.json({success: 'get call succeed!', url: req.url, data: response });
 });
 
 app.get('/properties/*', function(req, res) {

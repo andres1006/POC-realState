@@ -15,7 +15,7 @@
       "function": {
         "propertiesLambda": {
           "deploymentBucketName": "amplify-realstate-staging-50449-deployment",
-          "s3Key": "amplify-builds/propertiesLambda-7459317a666f73507572-build.zip"
+          "s3Key": "amplify-builds/propertiesLambda-61765a59503549756b7a-build.zip"
         }
       },
       "api": {

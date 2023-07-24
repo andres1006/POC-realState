@@ -7,6 +7,7 @@
 /* eslint-disable */
 import * as React from "react";
 import { Property } from "../models";
+import { SortDirection } from "@aws-amplify/datastore";
 import {
   getOverrideProps,
   useDataStoreBinding,
@@ -15,10 +16,12 @@ import CardPropertyHorizontal from "./CardPropertyHorizontal";
 import { Collection } from "@aws-amplify/ui-react";
 export default function CardPropertyHorizontalCollection(props) {
   const { items: itemsProp, overrideItems, overrides, ...rest } = props;
+  const itemsPagination = { sort: (s) => s.price(SortDirection.ASCENDING) };
   const [items, setItems] = React.useState(undefined);
   const itemsDataStore = useDataStoreBinding({
     type: "collection",
     model: Property,
+    pagination: itemsPagination,
   }).items;
   React.useEffect(() => {
     if (itemsProp !== undefined) {
@@ -30,9 +33,9 @@ export default function CardPropertyHorizontalCollection(props) {
   return (
     <Collection
       type="list"
-      isSearchable={true}
+      isSearchable="true"
       isPaginated={true}
-      searchPlaceholder="Search..."
+      searchPlaceholder="Buscar..."
       itemsPerPage={4}
       direction="column"
       justifyContent="left"
