@@ -7,67 +7,93 @@
 /* eslint-disable */
 import * as React from "react";
 import { getOverrideProps } from "@aws-amplify/ui-react/internal";
-import { Button, Flex, SearchField, Text, View } from "@aws-amplify/ui-react";
+import { Button, Flex, SearchField, Text } from "@aws-amplify/ui-react";
+import NewIcons from "./NewIcons";
 export default function SearchProperties(props) {
-  const { overrides, ...rest } = props;
+  const { value, overrides, ...rest } = props;
   return (
-    <View
-      width="648px"
-      height="258px"
-      display="block"
-      gap="unset"
-      alignItems="unset"
-      justifyContent="unset"
+    <Flex
+      gap="0"
+      direction="column"
+      width="669px"
+      height="171px"
+      justifyContent="flex-start"
+      alignItems="flex-start"
+      overflow="hidden"
       position="relative"
-      padding="0px 0px 0px 0px"
+      padding="20px 9px 20px 9px"
       {...getOverrideProps(overrides, "SearchProperties")}
       {...rest}
     >
-      <View
-        padding="0px 0px 0px 0px"
-        width="648px"
-        height="40px"
-        display="block"
-        gap="unset"
-        alignItems="unset"
-        justifyContent="unset"
-        position="absolute"
-        top="53.49%"
-        bottom="31.01%"
-        left="0%"
-        right="0%"
-        {...getOverrideProps(overrides, "Search")}
+      <Flex
+        gap="4px"
+        direction="row"
+        width="657.95px"
+        height="unset"
+        justifyContent="flex-start"
+        alignItems="center"
+        shrink="0"
+        position="relative"
+        padding="3px 0px 3px 0px"
+        {...getOverrideProps(overrides, "Breadcrumb")}
       >
-        <SearchField
-          width="459px"
+        <Text
+          fontFamily="Roboto"
+          fontSize="16px"
+          fontWeight="500"
+          color="rgba(16,10,85,1)"
+          lineHeight="24px"
+          textAlign="left"
+          display="block"
+          direction="column"
+          justifyContent="unset"
+          width="unset"
           height="unset"
-          placeholder="Buscar..."
-          position="absolute"
-          top="0%"
-          bottom="0%"
-          left="0%"
-          right="29.17%"
-          size="default"
-          isDisabled={false}
-          labelHidden={true}
-          variation="default"
-          {...getOverrideProps(overrides, "SearchField")}
-        ></SearchField>
-        <Button
-          width="173px"
+          gap="unset"
+          alignItems="unset"
+          shrink="0"
+          position="relative"
+          padding="0px 0px 0px 0px"
+          whiteSpace="pre-wrap"
+          children="Home"
+          {...getOverrideProps(overrides, "Home")}
+        ></Text>
+        <NewIcons
+          width="20px"
+          height="20px"
+          display="block"
+          gap="unset"
+          alignItems="unset"
+          justifyContent="unset"
+          shrink="0"
+          position="relative"
+          padding="0px 0px 0px 0px"
+          opacity="0.5"
+          property1="Chevron-right"
+          {...getOverrideProps(overrides, "NewIcons")}
+        ></NewIcons>
+        <Text
+          fontFamily="Roboto"
+          fontSize="16px"
+          fontWeight="500"
+          color="rgba(16,10,85,1)"
+          lineHeight="24px"
+          textAlign="left"
+          display="block"
+          direction="column"
+          justifyContent="unset"
+          width="unset"
           height="unset"
-          position="absolute"
-          top="0%"
-          bottom="0%"
-          left="73.3%"
-          right="0%"
-          size="default"
-          isDisabled={false}
-          variation="primary"
-          children="Más filtros"
-          {...getOverrideProps(overrides, "Button")}
-        ></Button>
-      </View>
+          gap="unset"
+          alignItems="unset"
+          shrink="0"
+          position="relative"
+          padding="0px 0px 0px 0px"
+          whiteSpace="pre-wrap"
+          children="Searcrth"
+          {...getOverrideProps(overrides, "Searcrth")}
+        ></Text>
+      </Flex>
       <Flex
         gap="8px"
         direction="column"
@@ -75,11 +101,8 @@ export default function SearchProperties(props) {
         height="unset"
         justifyContent="flex-start"
         alignItems="flex-start"
-        position="absolute"
-        top="15.5%"
-        bottom="55.81%"
-        left="0.39%"
-        right="57.95%"
+        shrink="0"
+        position="relative"
         padding="0px 0px 0px 0px"
         {...getOverrideProps(overrides, "Title")}
       >
@@ -114,7 +137,7 @@ export default function SearchProperties(props) {
           alignItems="flex-start"
           shrink="0"
           position="relative"
-          padding="0px 0px 0px 0px"
+          padding="8px 0px 8px 0px"
           {...getOverrideProps(overrides, "Frame 866")}
         >
           <Text
@@ -162,68 +185,39 @@ export default function SearchProperties(props) {
         </Flex>
       </Flex>
       <Flex
-        gap="4px"
+        gap="16px"
         direction="row"
         width="unset"
         height="unset"
-        justifyContent="center"
-        alignItems="center"
-        position="absolute"
-        top="0%"
-        bottom="90.7%"
-        left="0%"
-        right="79.48%"
+        justifyContent="flex-start"
+        alignItems="flex-start"
+        shrink="0"
+        position="relative"
         padding="0px 0px 0px 0px"
-        {...getOverrideProps(overrides, "Breadcrumb")}
+        {...getOverrideProps(overrides, "Search")}
       >
-        <Text
-          fontFamily="Roboto"
-          fontSize="16px"
-          fontWeight="500"
-          color="rgba(16,10,85,1)"
-          lineHeight="24px"
-          textAlign="left"
-          display="block"
-          direction="column"
-          justifyContent="unset"
-          width="unset"
+        <SearchField
+          width="459px"
           height="unset"
-          gap="unset"
-          alignItems="unset"
+          placeholder="Buscar..."
           shrink="0"
-          position="relative"
-          padding="0px 0px 0px 0px"
-          whiteSpace="pre-wrap"
-          children="Home"
-          {...getOverrideProps(overrides, "Home")}
-        ></Text>
-        <View
-          width="20px"
-          height="20px"
-          {...getOverrideProps(overrides, "Icon")}
-        ></View>
-        <Text
-          fontFamily="Roboto"
-          fontSize="16px"
-          fontWeight="500"
-          color="rgba(16,10,85,1)"
-          lineHeight="24px"
-          textAlign="left"
-          display="block"
-          direction="column"
-          justifyContent="unset"
-          width="unset"
+          size="default"
+          isDisabled={false}
+          labelHidden={true}
+          variation="default"
+          {...getOverrideProps(overrides, "SearchField")}
+        ></SearchField>
+        <Button
+          width="173px"
           height="unset"
-          gap="unset"
-          alignItems="unset"
           shrink="0"
-          position="relative"
-          padding="0px 0px 0px 0px"
-          whiteSpace="pre-wrap"
-          children="Searcrth"
-          {...getOverrideProps(overrides, "Searcrth")}
-        ></Text>
+          size="default"
+          isDisabled={false}
+          variation="primary"
+          children="Más filtros"
+          {...getOverrideProps(overrides, "Button")}
+        ></Button>
       </Flex>
-    </View>
+    </Flex>
   );
 }

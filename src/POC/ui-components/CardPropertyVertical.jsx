@@ -10,7 +10,7 @@ import { getOverrideProps } from "@aws-amplify/ui-react/internal";
 import { Flex, Icon, Image, Text, View } from "@aws-amplify/ui-react";
 import NewIcons from "./NewIcons";
 export default function CardPropertyVertical(props) {
-  const { overrides, ...rest } = props;
+  const { property, overrides, ...rest } = props;
   return (
     <View
       width="385px"
@@ -101,7 +101,7 @@ export default function CardPropertyVertical(props) {
             position="relative"
             padding="0px 0px 0px 0px"
             whiteSpace="pre-wrap"
-            children="4 Beds"
+            children={`${property?.numbersBed}${" camas"}`}
             {...getOverrideProps(overrides, "4 Beds")}
           ></Text>
         </Flex>
@@ -148,7 +148,7 @@ export default function CardPropertyVertical(props) {
             position="relative"
             padding="0px 0px 0px 0px"
             whiteSpace="pre-wrap"
-            children="2 Bathrooms"
+            children={`${property?.numberBathroos}${" ba\u00F1os"}`}
             {...getOverrideProps(overrides, "2 Bathrooms")}
           ></Text>
         </Flex>
@@ -195,7 +195,7 @@ export default function CardPropertyVertical(props) {
             position="relative"
             padding="0px 0px 0px 0px"
             whiteSpace="pre-wrap"
-            children="6x7.5 m²"
+            children={`${property?.dimension}${" m2"}`}
             {...getOverrideProps(overrides, "6x7.5 m\u00B2")}
           ></Text>
         </Flex>
@@ -256,7 +256,7 @@ export default function CardPropertyVertical(props) {
           position="relative"
           padding="0px 0px 0px 0px"
           whiteSpace="pre-wrap"
-          children="Beverly Springfield"
+          children={property?.streetName}
           {...getOverrideProps(overrides, "Beverly Springfield")}
         ></Text>
         <Text
@@ -277,7 +277,7 @@ export default function CardPropertyVertical(props) {
           position="relative"
           padding="0px 0px 0px 0px"
           whiteSpace="pre-wrap"
-          children="tsafsafjkhasjhcklas"
+          children={property?.addressName}
           {...getOverrideProps(overrides, "tsafsafjkhasjhcklas")}
         ></Text>
       </Flex>
@@ -314,7 +314,7 @@ export default function CardPropertyVertical(props) {
           position="relative"
           padding="0px 0px 0px 0px"
           whiteSpace="pre-wrap"
-          children="$2,700"
+          children={`${"$ "}${property?.price}`}
           {...getOverrideProps(overrides, "$2,700")}
         ></Text>
         <Text
@@ -386,6 +386,7 @@ export default function CardPropertyVertical(props) {
           borderRadius="8px 8px 0px 0px"
           padding="0px 0px 0px 0px"
           objectFit="cover"
+          src={property?.urlImage}
           {...getOverrideProps(overrides, "pexels-binyamin-mellish-106399 1")}
         ></Image>
       </View>

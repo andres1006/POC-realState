@@ -55,14 +55,14 @@ export const schema = {
                 "longitud": {
                     "name": "longitud",
                     "isArray": false,
-                    "type": "Int",
+                    "type": "Float",
                     "isRequired": false,
                     "attributes": []
                 },
                 "latitude": {
                     "name": "latitude",
                     "isArray": false,
-                    "type": "Int",
+                    "type": "Float",
                     "isRequired": false,
                     "attributes": []
                 },
@@ -119,5 +119,5 @@ export const schema = {
     "enums": {},
     "nonModels": {},
     "codegenVersion": "3.4.4",
-    "version": "90297b9e8f01fd6c219c7e545638bc34"
+    "version": "6cbefe0e64f70012f040dd75dbb4e297"
 };

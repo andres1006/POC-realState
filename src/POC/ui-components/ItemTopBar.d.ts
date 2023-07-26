@@ -6,22 +6,17 @@
 
 import * as React from "react";
 import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
-import { NewIconsProps } from "./NewIcons";
 import { FlexProps, TextProps } from "@aws-amplify/ui-react";
 export declare type PrimitiveOverrideProps<T> = Partial<T> & React.DOMAttributes<HTMLDivElement>;
-export declare type ButtonAndresOverridesProps = {
-    ButtonAndres?: PrimitiveOverrideProps<FlexProps>;
-    NewIcons?: NewIconsProps;
-    Button?: PrimitiveOverrideProps<TextProps>;
+export declare type ItemTopBarOverridesProps = {
+    ItemTopBar?: PrimitiveOverrideProps<FlexProps>;
+    Label?: PrimitiveOverrideProps<TextProps>;
 } & EscapeHatchProps;
-export declare type ButtonAndresProps = React.PropsWithChildren<Partial<FlexProps> & {
-    buttonAndres?: React.ReactNode;
+export declare type ItemTopBarProps = React.PropsWithChildren<Partial<FlexProps> & {
     label?: String;
 } & {
-    showIcon?: "false" | "true";
-    size?: "Large" | "Medium" | "Small";
-    variant?: "Primary" | "Secondary";
+    active?: "false" | "true";
 } & {
-    overrides?: ButtonAndresOverridesProps | undefined | null;
+    overrides?: ItemTopBarOverridesProps | undefined | null;
 }>;
-export default function ButtonAndres(props: ButtonAndresProps): React.ReactElement;
+export default function ItemTopBar(props: ItemTopBarProps): React.ReactElement;

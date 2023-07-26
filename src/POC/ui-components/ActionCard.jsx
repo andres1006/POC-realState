@@ -153,7 +153,7 @@ export default function ActionCard(props) {
           position="relative"
           borderRadius="8px"
           padding="10px 16px 10px 16px"
-          backgroundColor="rgba(113,102,240,1)"
+          backgroundColor="rgba(75,128,221,1)"
           size="Small"
           variant="Primary"
           showIcon={false}

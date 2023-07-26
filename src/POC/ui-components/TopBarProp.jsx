@@ -258,73 +258,6 @@ export default function TopBarProp(props) {
             shrink="0"
             position="relative"
             padding="0px 0px 0px 0px"
-            {...getOverrideProps(overrides, "Menu Item / Default37884338")}
-          >
-            <Flex
-              padding="0px 0px 0px 0px"
-              width="68px"
-              height="40px"
-              display="block"
-              gap="unset"
-              alignItems="unset"
-              justifyContent="unset"
-              shrink="0"
-              position="relative"
-              {...getOverrideProps(overrides, "Selected")}
-            >
-              <View
-                width="68px"
-                height="40px"
-                display="block"
-                gap="unset"
-                alignItems="unset"
-                justifyContent="unset"
-                position="absolute"
-                top="0%"
-                bottom="0%"
-                left="0%"
-                right="0%"
-                borderRadius="4px"
-                padding="0px 0px 0px 0px"
-                backgroundColor="rgba(232,230,249,1)"
-                {...getOverrideProps(overrides, "Rectangle 2553")}
-              ></View>
-              <Text
-                fontFamily="Roboto"
-                fontSize="16px"
-                fontWeight="700"
-                color="rgba(112,101,240,1)"
-                lineHeight="24px"
-                textAlign="left"
-                display="block"
-                direction="column"
-                justifyContent="unset"
-                width="unset"
-                height="unset"
-                gap="unset"
-                alignItems="unset"
-                position="absolute"
-                top="20%"
-                bottom="20%"
-                left="23.53%"
-                right="26.47%"
-                padding="0px 0px 0px 0px"
-                whiteSpace="pre-wrap"
-                children="Rent"
-                {...getOverrideProps(overrides, "Label37884341")}
-              ></Text>
-            </Flex>
-          </Flex>
-          <Flex
-            gap="10px"
-            direction="row"
-            width="unset"
-            height="unset"
-            justifyContent="flex-start"
-            alignItems="center"
-            shrink="0"
-            position="relative"
-            padding="0px 0px 0px 0px"
             {...getOverrideProps(overrides, "Menu Item / Default37884342")}
           >
             <Text
@@ -345,42 +278,8 @@ export default function TopBarProp(props) {
               position="relative"
               padding="0px 0px 0px 0px"
               whiteSpace="pre-wrap"
-              children="Buy"
+              children="API Rest"
               {...getOverrideProps(overrides, "Label37884343")}
-            ></Text>
-          </Flex>
-          <Flex
-            gap="10px"
-            direction="row"
-            width="unset"
-            height="unset"
-            justifyContent="flex-start"
-            alignItems="center"
-            shrink="0"
-            position="relative"
-            padding="0px 0px 0px 0px"
-            {...getOverrideProps(overrides, "Menu Item / Default37884344")}
-          >
-            <Text
-              fontFamily="Roboto"
-              fontSize="16px"
-              fontWeight="500"
-              color="rgba(0,9,41,1)"
-              lineHeight="24px"
-              textAlign="left"
-              display="block"
-              direction="column"
-              justifyContent="unset"
-              width="unset"
-              height="unset"
-              gap="unset"
-              alignItems="unset"
-              shrink="0"
-              position="relative"
-              padding="0px 0px 0px 0px"
-              whiteSpace="pre-wrap"
-              children="Sell"
-              {...getOverrideProps(overrides, "Label37884345")}
             ></Text>
           </Flex>
           <Flex

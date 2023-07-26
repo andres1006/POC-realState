@@ -14,7 +14,12 @@ import {
 import NewIcons from "./NewIcons";
 import { Flex, Text } from "@aws-amplify/ui-react";
 export default function ButtonAndres(props) {
-  const { overrides: overridesProp, ...rest } = props;
+  const {
+    buttonAndres,
+    label = "Button",
+    overrides: overridesProp,
+    ...rest
+  } = props;
   const variants = [
     {
       variantValues: {
@@ -26,14 +31,14 @@ export default function ButtonAndres(props) {
         NewIcons: {},
         Button: {
           fontSize: "16px",
-          color: "rgba(112,101,240,1)",
+          color: "rgba(75,128,221,1)",
           lineHeight: "24px",
         },
         ButtonAndres: {
           gap: "10px",
           padding: "10px 22px 10px 22px",
           backgroundColor: "rgba(255,255,255,0)",
-          border: "2px SOLID rgba(113,102,240,1)",
+          border: "2px SOLID rgba(75,128,221,1)",
         },
       },
     },
@@ -43,13 +48,13 @@ export default function ButtonAndres(props) {
         NewIcons: { display: "block" },
         Button: {
           fontSize: "16px",
-          color: "rgba(112,101,240,1)",
+          color: "rgba(75,128,221,1)",
           lineHeight: "24px",
         },
         ButtonAndres: {
           padding: "10px 22px 10px 22px",
           backgroundColor: "rgba(255,255,255,0)",
-          border: "2px SOLID rgba(113,102,240,1)",
+          border: "2px SOLID rgba(75,128,221,1)",
         },
       },
     },
@@ -58,11 +63,7 @@ export default function ButtonAndres(props) {
       overrides: {
         NewIcons: {},
         Button: { fontSize: "16px", lineHeight: "24px" },
-        ButtonAndres: {
-          gap: "10px",
-          padding: "12px 24px 12px 24px",
-          backgroundColor: "rgba(112,101,240,1)",
-        },
+        ButtonAndres: { gap: "10px", padding: "12px 24px 12px 24px" },
       },
     },
     {
@@ -70,10 +71,7 @@ export default function ButtonAndres(props) {
       overrides: {
         NewIcons: { display: "block" },
         Button: { fontSize: "16px", lineHeight: "24px" },
-        ButtonAndres: {
-          padding: "12px 24px 12px 24px",
-          backgroundColor: "rgba(112,101,240,1)",
-        },
+        ButtonAndres: { padding: "12px 24px 12px 24px" },
       },
     },
     {
@@ -84,7 +82,6 @@ export default function ButtonAndres(props) {
         ButtonAndres: {
           gap: "10px",
           padding: "16px 32px 16px 32px",
-          backgroundColor: "rgba(112,101,240,1)",
           overflow: "hidden",
         },
       },
@@ -95,7 +92,7 @@ export default function ButtonAndres(props) {
         NewIcons: {},
         Button: {
           fontSize: "16px",
-          color: "rgba(112,101,240,1)",
+          color: "rgba(75,128,221,1)",
           lineHeight: "24px",
         },
         ButtonAndres: {
@@ -103,7 +100,7 @@ export default function ButtonAndres(props) {
           padding: "14px 30px 14px 30px",
           backgroundColor: "rgba(255,255,255,0)",
           overflow: "hidden",
-          border: "2px SOLID rgba(113,102,240,1)",
+          border: "2px SOLID rgba(75,128,221,1)",
         },
       },
     },
@@ -117,18 +114,18 @@ export default function ButtonAndres(props) {
           property1: "Key",
         },
         Button: {},
-        ButtonAndres: { backgroundColor: "rgba(112,101,240,1)" },
+        ButtonAndres: {},
       },
     },
     {
       variantValues: { size: "Small", variant: "Secondary", showIcon: "false" },
       overrides: {
         NewIcons: {},
-        Button: { color: "rgba(112,101,240,1)" },
+        Button: { color: "rgba(75,128,221,1)" },
         ButtonAndres: {
           padding: "8px 14px 8px 14px",
           backgroundColor: "rgba(255,255,255,0)",
-          border: "2px SOLID rgba(123,97,255,1)",
+          border: "2px SOLID rgba(75,128,221,1)",
         },
       },
     },
@@ -136,11 +133,11 @@ export default function ButtonAndres(props) {
       variantValues: { size: "Small", variant: "Secondary", showIcon: "true" },
       overrides: {
         NewIcons: { display: "block" },
-        Button: { color: "rgba(112,101,240,1)" },
+        Button: { color: "rgba(75,128,221,1)" },
         ButtonAndres: {
           padding: "8px 14px 8px 14px",
           backgroundColor: "rgba(255,255,255,0)",
-          border: "2px SOLID rgba(113,102,240,1)",
+          border: "2px SOLID rgba(75,128,221,1)",
         },
       },
     },
@@ -149,11 +146,7 @@ export default function ButtonAndres(props) {
       overrides: {
         NewIcons: { display: "block" },
         Button: { fontSize: "16px", lineHeight: "24px" },
-        ButtonAndres: {
-          padding: "16px 32px 16px 32px",
-          backgroundColor: "rgba(112,101,240,1)",
-          overflow: "hidden",
-        },
+        ButtonAndres: { padding: "16px 32px 16px 32px", overflow: "hidden" },
       },
     },
     {
@@ -162,14 +155,14 @@ export default function ButtonAndres(props) {
         NewIcons: { display: "block" },
         Button: {
           fontSize: "16px",
-          color: "rgba(112,101,240,1)",
+          color: "rgba(75,128,221,1)",
           lineHeight: "24px",
         },
         ButtonAndres: {
           padding: "14px 30px 14px 30px",
           backgroundColor: "rgba(255,255,255,0)",
           overflow: "hidden",
-          border: "2px SOLID rgba(113,102,240,1)",
+          border: "2px SOLID rgba(75,128,221,1)",
         },
       },
     },
@@ -193,7 +186,7 @@ export default function ButtonAndres(props) {
       position="relative"
       borderRadius="8px"
       padding="10px 16px 10px 16px"
-      backgroundColor="rgba(113,102,240,1)"
+      backgroundColor="rgba(75,128,221,1)"
       display="flex"
       {...getOverrideProps(overrides, "ButtonAndres")}
       {...rest}
@@ -229,7 +222,7 @@ export default function ButtonAndres(props) {
         position="relative"
         padding="0px 0px 0px 0px"
         whiteSpace="pre-wrap"
-        children="Button"
+        children={label}
         {...getOverrideProps(overrides, "Button")}
       ></Text>
     </Flex>

@@ -6,8 +6,8 @@ type Property @model @auth(rules: [{allow: public}]) {
   numbersBed: Int
   numberBathroos: Int
   dimension: String
-  longitud: Int
-  latitude: Int
+  longitud: Float
+  latitude: Float
   urlImage: AWSURL
 }
  

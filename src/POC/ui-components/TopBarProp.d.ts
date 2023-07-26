@@ -22,14 +22,8 @@ export declare type TopBarPropOverridesProps = {
     Vector37884335?: PrimitiveOverrideProps<IconProps>;
     Vector37884336?: PrimitiveOverrideProps<IconProps>;
     "Nav Items"?: PrimitiveOverrideProps<FlexProps>;
-    "Menu Item / Default37884338"?: PrimitiveOverrideProps<FlexProps>;
-    Selected?: PrimitiveOverrideProps<FlexProps>;
-    "Rectangle 2553"?: PrimitiveOverrideProps<ViewProps>;
-    Label37884341?: PrimitiveOverrideProps<TextProps>;
     "Menu Item / Default37884342"?: PrimitiveOverrideProps<FlexProps>;
     Label37884343?: PrimitiveOverrideProps<TextProps>;
-    "Menu Item / Default37884344"?: PrimitiveOverrideProps<FlexProps>;
-    Label37884345?: PrimitiveOverrideProps<TextProps>;
     "Header menu / Default37884346"?: PrimitiveOverrideProps<FlexProps>;
     Label37884347?: PrimitiveOverrideProps<TextProps>;
     Icon37884348?: PrimitiveOverrideProps<ViewProps>;

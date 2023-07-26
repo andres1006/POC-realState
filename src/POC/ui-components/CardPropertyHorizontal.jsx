@@ -321,7 +321,7 @@ export default function CardPropertyHorizontal(props) {
               position="relative"
               padding="0px 0px 0px 0px"
               whiteSpace="pre-wrap"
-              children={property?.dimension}
+              children={`${property?.dimension}${" m2"}`}
               {...getOverrideProps(overrides, "6x8 m\u00B2")}
             ></Text>
           </Flex>

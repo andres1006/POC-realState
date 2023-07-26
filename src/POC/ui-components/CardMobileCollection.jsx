@@ -11,9 +11,9 @@ import {
   getOverrideProps,
   useDataStoreBinding,
 } from "@aws-amplify/ui-react/internal";
-import CardPropertyHorizontal from "./CardPropertyHorizontal";
+import CardMobile from "./CardMobile";
 import { Collection } from "@aws-amplify/ui-react";
-export default function CardPropertyHorizontalCollection(props) {
+export default function CardMobileCollection(props) {
   const { items: itemsProp, overrideItems, overrides, ...rest } = props;
   const [items, setItems] = React.useState(undefined);
   const itemsDataStore = useDataStoreBinding({
@@ -30,22 +30,17 @@ export default function CardPropertyHorizontalCollection(props) {
   return (
     <Collection
       type="list"
-      isSearchable="true"
-      isPaginated={true}
-      searchPlaceholder="Search..."
-      itemsPerPage={5}
       direction="column"
       justifyContent="left"
       items={items || []}
-      {...getOverrideProps(overrides, "CardPropertyHorizontalCollection")}
+      {...getOverrideProps(overrides, "CardMobileCollection")}
       {...rest}
     >
       {(item, index) => (
-        <CardPropertyHorizontal
-          property={item}
+        <CardMobile
           key={item.id}
           {...(overrideItems && overrideItems({ item, index }))}
-        ></CardPropertyHorizontal>
+        ></CardMobile>
       )}
     </Collection>
   );

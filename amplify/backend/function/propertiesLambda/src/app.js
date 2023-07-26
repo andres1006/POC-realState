@@ -17,9 +17,6 @@ const AWS_REGION = "us-east-2";
 
 AWS.config.update({
   region: AWS_REGION,
-  accessKeyId: 'AKIAQKSGYAOTEVFM2JCN',
-  accessSecretKey: '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',
-
 });
 
 const clientDynamoDB = new AWS.DynamoDB.DocumentClient();
@@ -48,11 +45,11 @@ app.get('/properties', async function(req, res) {
   const params = { TableName: tableName};
   try {
     //const command = new AWS.GetItemCommand(params);
-    response = await clientDynamoDB.scan(params).promise();
-    response = { body: response }
+    response = await clientDynamoDB.scan(params).promise() || null
   } catch (err) {
     response = { error: err }
-    res.json({error: 'get call error!', url: req.url, data: response });
+    res.json({success: 'error', url: req.url, data: response });
+    return
   }
   res.json({success: 'get call succeed!', url: req.url, data: response });
 });
